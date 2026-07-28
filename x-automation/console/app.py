@@ -524,7 +524,7 @@ class H(BaseHTTPRequestHandler):
    if not row:raise E(404,"not_found","workflow item not found")
    self.out(200,{"ok":True,"data":dict(row)})
    return
-  if action not in ("draft","regenerate","skip"):raise E(404,"not_found","Not found")
+  if action not in ("draft","regenerate","skip","manual_sent"):raise E(404,"not_found","Not found")
   data=self.data(body) if body else {}
   c=conn()
   try:
@@ -535,6 +535,23 @@ class H(BaseHTTPRequestHandler):
    if action=="skip":
     n=now();c.execute("INSERT INTO workflow_items(item_key,account_id,source,author_handle,text,url,observed_at,status,note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,'skipped',?,?,?) ON CONFLICT(item_key) DO UPDATE SET status='skipped',note=excluded.note,updated_at=excluded.updated_at",(item_key,item["account_id"],item["source"],item["author_handle"],item["text"],item["url"],item["observed_at"],str(data.get("note",""))[:200],n,n));c.execute("INSERT INTO audit_log(id,created_at,actor,action,target,payload_json) VALUES(NULL,?,?,?,?,?)",(n,"console-admin","workflow.skip",item_key,jd({"note":str(data.get("note",""))[:200]})));c.close()
     self.out(200,{"ok":True,"data":{"item_key":item_key,"status":"skipped"}})
+    return
+   if action=="manual_sent":
+    row=c.execute("SELECT draft_text,analysis_json FROM workflow_items WHERE item_key=?",(item_key,)).fetchone()
+    draft_text=(row["draft_text"] if row else "") or ""
+    if not draft_text:raise E(409,"no_draft","该条还没有评论草稿，请先生成评论草稿。")
+    import json as _j
+    try:ana=_j.loads((row["analysis_json"] if row else "") or "{}")
+    except Exception:ana={}
+    import feishu_records
+    n=now()
+    try:
+     recorded=feishu_records.record_reply(account_name=str(item["author_handle"] or ""),post_url=item["url"] or "",post_time="",summary=str(ana.get("summary","")),angle=str(ana.get("angle","")),comment=draft_text,sent_at=str(n))
+     feishu_note="飞书评论记录已写入" if recorded else "飞书未配置，已跳过记录"
+    except feishu_records.FeishuRecordError as fe:
+     feishu_note=f"飞书记录写入失败：{fe.code}"
+    c.execute("INSERT INTO workflow_items(item_key,account_id,source,author_handle,text,url,observed_at,status,note,created_at,updated_at) VALUES(?,?,?,?,?,?,?,'sent','手动发布',?,?) ON CONFLICT(item_key) DO UPDATE SET status='sent',note='手动发布',updated_at=excluded.updated_at",(item_key,item["account_id"],item["source"],item["author_handle"],item["text"],item["url"],item["observed_at"],n,n));c.execute("INSERT INTO audit_log(id,created_at,actor,action,target,payload_json) VALUES(NULL,?,?,?,?,?)",(n,"console-admin","workflow.manual_sent",item_key,"{}"));c.close()
+    self.out(200,{"ok":True,"data":{"item_key":item_key,"status":"sent","feishu_note":feishu_note}})
     return
    recent=[r[0] for r in c.execute("SELECT draft_text FROM workflow_items WHERE status='sent' AND draft_text IS NOT NULL AND length(draft_text)>0 ORDER BY updated_at DESC LIMIT 8",()).fetchall()]
    c.close()
@@ -562,7 +579,17 @@ class H(BaseHTTPRequestHandler):
    finally:c.close()
    raise E(502,"llm_failed",str(e)[:200])
   # Create a reply draft in the write service via BFF.
-  payload={"account_id":int(item["account_id"]),"request_type":"reply","payload":{"target":item["url"] or item["item_key"],"text":draft["comment"]},"actor":"console-admin"}
+  # Resolve the write-service account by AdsPower profile (browse account ids
+  # do NOT match write-service account ids; passing them through causes
+  # "account not found" on the write service).
+  try:
+   write_account_id=self._postflow_resolve_write_account(item["profile_id"])
+  except E as e:
+   n=now();c=conn()
+   try:c.execute("UPDATE workflow_items SET status='candidate',note=?,updated_at=? WHERE item_key=?",(f"写入账号未连接：{e.code}",n,item_key))
+   finally:c.close()
+   raise
+  payload={"account_id":write_account_id,"request_type":"reply","payload":{"target":item["url"] or item["item_key"],"text":draft["comment"]},"actor":"console-admin"}
   try:
    created=self.xwrite_upstream("POST","/requests",payload,False)
   except E as e:

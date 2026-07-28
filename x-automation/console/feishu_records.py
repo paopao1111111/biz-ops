@@ -103,6 +103,18 @@ def _append_rows(sheet_token: str, sheet_id: str, token: str,
     return data.get("data") or {}
 
 
+def _fmt_time(value):
+    """Sheets rows are for operators: render epoch values as readable local time."""
+    s = str(value or "").strip()
+    if s.isdigit() and len(s) >= 9:
+        try:
+            import time as _t
+            return _t.strftime("%Y-%m-%d %H:%M", _t.localtime(int(s)))
+        except (ValueError, OverflowError):
+            return s
+    return s
+
+
 def record_reply(*, account_name: str, post_url: str, post_time: str,
                  summary: str, angle: str, comment: str, sent_at: str,
                  config: dict[str, str] | None = None) -> bool:
@@ -111,7 +123,7 @@ def record_reply(*, account_name: str, post_url: str, post_time: str,
     sheet_id = cfg.get("reply_sheet")
     if not _configured(cfg) or not sheet_id:
         return False
-    row = [account_name, post_url, post_time, summary, angle, comment, sent_at]
+    row = [account_name, post_url, _fmt_time(post_time), summary, angle, comment, _fmt_time(sent_at)]
     token = _tenant_token(cfg["app_id"], cfg["app_secret"])
     _append_rows(cfg["sheet_token"], sheet_id, token, [row])
     return True
@@ -125,7 +137,7 @@ def record_post(*, account_name: str, body_text: str, image_url: str,
     sheet_id = cfg.get("post_sheet")
     if not _configured(cfg) or not sheet_id:
         return False
-    row = [account_name, body_text, image_url, published_at, post_url]
+    row = [account_name, body_text, image_url, _fmt_time(published_at), post_url]
     token = _tenant_token(cfg["app_id"], cfg["app_secret"])
     _append_rows(cfg["sheet_token"], sheet_id, token, [row])
     return True
