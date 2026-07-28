@@ -1,0 +1,29 @@
+# secrets — never commit real credentials
+*.env
+!*.env.example
+*.secrets.json
+!secrets.example.json
+*.pem
+*.key
+.env.*
+!.env.*.example
+# data / runtime
+*.db
+*.db-wal
+*.db-shm
+*.sqlite*
+data/
+logs/
+*.log
+# python
+__pycache__/
+*.pyc
+.venv/
+# os
+.DS_Store
+# scratch / baselines
+*-baseline.json
+*.diff
+*-hashes.txt
+screenshots/
+production-service.txt

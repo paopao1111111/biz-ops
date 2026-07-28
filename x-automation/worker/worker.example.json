@@ -1,0 +1,20 @@
+{
+  "controller_url": "https://console.example.com",
+  "worker_id": "REPLACE_WITH_UNIQUE_WORKER_ID",
+  "worker_secret": "REPLACE_WITH_PANEL_WORKER_SECRET",
+  "adspower_base_url": "http://127.0.0.1:50325",
+  "adspower_api_key": "REPLACE_IF_REQUIRED",
+  "poll_seconds": 5,
+  "heartbeat_seconds": 30,
+  "request_timeout_seconds": 30,
+  "progress_seconds": 22,
+  "max_concurrent_jobs": 3,
+  "no_forward_progress_seconds": 90,
+  "hard_runtime_grace_seconds": 60,
+  "probe_hard_runtime_seconds": 360,
+  "cooperative_cancel_seconds": 10,
+  "terminate_grace_seconds": 5,
+  "cleanup_timeout_seconds": 45,
+  "reconciliation_journal": "state/reconciliation.json",
+  "log_file": "logs/worker.log"
+}

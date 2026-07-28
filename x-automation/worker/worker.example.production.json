@@ -1,0 +1,13 @@
+{
+  "controller_url": "https://console.example.com",
+  "worker_id": "windows-worker-10-0-2-123",
+  "worker_secret": "REPLACE_WITH_PANEL_WORKER_SECRET",
+  "adspower_base_url": "http://127.0.0.1:50325",
+  "adspower_api_key": "REPLACE_IF_REQUIRED",
+  "poll_seconds": 5,
+  "heartbeat_seconds": 30,
+  "request_timeout_seconds": 30,
+  "progress_seconds": 22,
+  "max_concurrent_jobs": 3,
+  "log_file": "logs/worker.log"
+}

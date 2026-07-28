@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{{OAUTH_TITLE}} · X 写入账号授权</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card oauth-result {{OAUTH_TONE}}" aria-labelledby="oauthResultTitle">
+      <div class="oauth-result-mark" aria-hidden="true"></div>
+      <h1 id="oauthResultTitle">{{OAUTH_TITLE}}</h1>
+      <p class="login-description">{{OAUTH_MESSAGE}}</p>
+      <p class="oauth-result-code">{{OAUTH_CODE}}</p>
+      <p class="readonly-note">此页面不包含 Access Token。Windows 浏览器 Profile 只负责完成人工授权，后续操作请回到 8790 控制面板。</p>
+    </section>
+  </main>
+</body>
+</html>

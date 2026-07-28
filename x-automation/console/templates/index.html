@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{CSRF_TOKEN}}">
+  <meta name="color-scheme" content="light">
+  <title>X 账号浏览控制台</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="nav-rail" aria-label="主导航">
+      <div class="console-name">X 浏览控制台</div>
+      <nav class="primary-nav">
+        <a href="#overview" data-view-link="overview">概览</a>
+        <a href="#accounts" data-view-link="accounts">账号</a>
+        <a href="#runs" data-view-link="runs">运行记录</a>
+        <a href="#write" data-view-link="write">写入操作</a>
+        <a href="#workflow" data-view-link="workflow">内容工作流</a>
+        <a href="#postflow" data-view-link="postflow">选题发布</a>
+        <a href="#system" data-view-link="system">系统</a>
+      </nav>
+      <button class="text-button rail-logout" id="logoutButton" type="button">退出登录</button>
+    </aside>
+
+    <main class="workspace">
+      <nav class="mobile-nav" aria-label="移动端主导航">
+        <a href="#overview" data-view-link="overview">概览</a>
+        <a href="#accounts" data-view-link="accounts">账号</a>
+        <a href="#runs" data-view-link="runs">运行记录</a>
+        <a href="#write" data-view-link="write">写入</a>
+        <a href="#workflow" data-view-link="workflow">工作流</a>
+        <a href="#postflow" data-view-link="postflow">发帖</a>
+        <a href="#system" data-view-link="system">系统</a>
+      </nav>
+
+      <header class="status-strip" aria-label="当前系统状态">
+        <div class="status-item"><span class="state-mark safe"></span><b>浏览严格只读</b></div>
+        <div class="status-item"><span id="scheduleMark" class="state-mark neutral"></span><b id="scheduleState">排程加载中</b></div>
+        <div class="status-item status-item-dual"><span id="workerMark" class="state-mark neutral"></span><b id="workerState">Worker 检测中</b><small id="workerDetail" title="等待心跳">等待心跳</small><span class="status-sep" aria-hidden="true"></span><span id="workloadMark" class="state-mark neutral"></span><b id="workloadState">负载加载中</b><small id="workloadDetail">等待权威数据</small></div>
+        <div class="status-item"><span id="syncMark" class="state-mark neutral"></span><b id="lastSync">尚未同步</b></div>
+        <button class="button schedule-button" id="globalScheduleButton" type="button" disabled>排程加载中</button>
+      </header>
+
+      <div id="pageError" class="page-alert hidden" role="alert"></div>
+
+      <section class="view" id="view-overview" data-view="overview" aria-labelledby="overviewTitle">
+        <div class="view-heading"><div><h1 id="overviewTitle">概览</h1><p>当前负载、今日预算与待处理事项。</p></div></div>
+        <div class="summary-grid" id="summaryGrid" aria-live="polite"></div>
+        <section class="panel attention-panel" aria-labelledby="attentionTitle">
+          <div class="panel-heading"><div><h2 id="attentionTitle">关注队列</h2><p>只显示当前仍在阻塞或需要确认的问题。</p></div><span id="attentionCount" class="count-label">0 项</span></div>
+          <div id="attentionList" class="attention-list"></div>
+        </section>
+      </section>
+
+      <section class="view hidden" id="view-accounts" data-view="accounts" aria-labelledby="accountsTitle">
+        <div class="view-heading split-heading"><div><h1 id="accountsTitle">账号</h1><p>环境、活动、预算与当前问题。</p></div><div class="toolbar"><label class="search-field"><span>搜索</span><input id="accountSearch" type="search" autocomplete="off" placeholder="账号、标签、Profile"></label><label class="filter-field"><span>状态</span><select id="accountFilter"><option value="all">全部</option><option value="action">需处理</option><option value="active">运行中</option><option value="available">可用</option><option value="paused">排程暂停</option></select></label><span id="accountCount" class="count-label">0 个账号</span></div></div>
+        <div id="accountsBody" class="card-grid accounts-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="view hidden" id="view-runs" data-view="runs" aria-labelledby="runsTitle">
+        <div class="view-heading split-heading"><div><h1 id="runsTitle">运行记录</h1><p>选择账号查看其运行记录。</p></div><div class="toolbar"><label class="filter-field"><span>账号</span><select id="runsAccountSelect"></select></label><div class="filter-tabs" id="runFilters" role="group" aria-label="运行状态筛选"><button type="button" data-run-filter="active">进行中</button><button type="button" data-run-filter="cleaning">清理中</button><button type="button" data-run-filter="attention">需处理</button><button type="button" data-run-filter="completed">完成</button><button type="button" data-run-filter="failed">失败</button><button type="button" data-run-filter="all" class="active">全部</button></div></div></div>
+        <div id="runsBody" class="card-grid runs-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="view hidden" id="view-write" data-view="write" aria-labelledby="writeTitle">
+        <div class="view-heading"><div><h1 id="writeTitle">写入操作</h1><p>独立官方 X API 写入服务，逐项人工确认后发送。</p></div></div>
+        <div id="writeStatusPanel"></div>
+        <section class="panel write-auth-panel" aria-labelledby="writeOAuthTitle">
+          <div class="panel-heading"><div><h2 id="writeOAuthTitle">连接 X 写入账号</h2><p>授权链接在对应账号已登录的 Windows AdsPower Profile 中打开。</p></div></div>
+          <div id="writeOAuthPanel" class="panel-body"></div>
+        </section>
+        <div class="write-grid">
+          <section class="panel" aria-labelledby="writeNewTitle">
+            <div class="panel-heading"><div><h2 id="writeNewTitle">新建操作</h2><p>草稿 → 提交 → 预览并批准，三步缺一不可。</p></div></div>
+            <div class="panel-body" id="writeNewPanel"></div>
+          </section>
+          <section class="panel" aria-labelledby="writePendingTitle">
+            <div class="panel-heading"><div><h2 id="writePendingTitle">待处理</h2><p>待批准和等待二次确认的请求。</p></div><span id="writePendingCount" class="count-label">0 项</span></div>
+            <div id="writePendingList" class="write-list"></div>
+          </section>
+        </div>
+        <section class="panel" aria-labelledby="writeOperationsTitle">
+          <div class="panel-heading"><div><h2 id="writeOperationsTitle">操作记录</h2><p>执行状态、结果和人工对账。</p></div><span id="writeOperationsCount" class="count-label">0 条</span></div>
+          <div id="writeOperationsList" class="write-list"></div>
+        </section>
+        <section class="panel" aria-labelledby="writeAccountsTitle">
+          <div class="panel-heading"><div><h2 id="writeAccountsTitle">已连接写入账号</h2><p>只显示授权类型、身份、scope 和有效期等安全摘要；任何 secret/token 都不会回显。</p></div><span id="writeAccountsCount" class="count-label">0 个账号</span></div>
+          <div id="writeAccountsList" class="write-list"></div>
+        </section>
+        <section class="panel" aria-labelledby="writeAuditTitle">
+          <div class="panel-heading"><div><h2 id="writeAuditTitle">写入审计</h2><p>所有状态变化均与服务端同事务记录。</p></div></div>
+          <div id="writeAuditList" class="write-list"></div>
+        </section>
+      </section>
+
+      <section class="view hidden" id="view-workflow" data-view="workflow" aria-labelledby="workflowTitle">
+        <div class="view-heading split-heading"><div><h1 id="workflowTitle">内容工作流</h1><p>关键词发现帖子 → AI 起草评论 → 点同意即发送。发送失败不自动重发。</p></div><span id="workflowCount" class="count-label">0 条候选</span></div>
+        <div id="workflowPanel" class="panel table-panel"><div id="workflowList" class="write-list"></div></div>
+      </section>
+
+      <section class="view hidden" id="view-postflow" data-view="postflow" aria-labelledby="postflowTitle">
+        <div class="view-heading split-heading"><div><h1 id="postflowTitle">选题发布</h1><p>归纳选题 → 生成正文 → 复制到 X 手动发布 → 标记已发布并记入飞书。手动模式，不耗 X 额度。</p></div><span id="postflowCount" class="count-label">0 个选题</span></div>
+        <div class="panel settings-panel">
+          <div class="settings-form">
+            <label><span>账号</span><select id="postflowAccount"></select></label>
+            <label><span>关键词（可空，空则归纳该账号全部搜索帖）</span><input id="postflowKeyword" placeholder="如：AI Agent"></label>
+            <label><span>帖子语言</span><select id="postflowLang"><option value="en" selected>English（默认，英文号用）</option><option value="zh">中文</option></select></label>
+            <label><span>补充要求（可空）</span><input id="postflowInstruction" placeholder="如：侧重工具实测角度、带点个人经历"></label>
+            <div class="action-row"><button class="button primary" id="postflowSummarizeBtn" type="button">归纳选题</button></div>
+          </div>
+        </div>
+        <div id="postflowPanel" class="panel table-panel"><div id="postflowList" class="write-list"></div></div>
+      </section>
+
+      <section class="view hidden" id="view-system" data-view="system" aria-labelledby="systemTitle">
+        <div class="view-heading"><div><h1 id="systemTitle">系统</h1><p>版本、心跳、权威负载与只读边界。</p></div></div>
+        <div id="systemGrid" class="system-grid"></div>
+        <section class="panel prohibited-panel" aria-labelledby="prohibitedTitle"><div class="panel-heading"><div><h2 id="prohibitedTitle">浏览 Worker 明确禁止的交互</h2><p>浏览 Worker 永不提供以下能力；点赞、转发和发布只能在“写入操作”中通过独立官方 API 服务逐项人工确认后执行。</p></div></div><ul class="prohibited-list"><li>点赞</li><li>回复或评论</li><li>关注</li><li>转发或 Repost</li><li>发布内容</li><li>强制结束浏览器或批量关闭环境</li><li>自动登录或绕过账号验证</li></ul></section>
+      </section>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop hidden" id="drawerBackdrop"></div>
+  <aside class="drawer hidden" id="accountDrawer" role="dialog" aria-modal="true" aria-labelledby="accountDrawerTitle">
+    <header class="drawer-header"><div><h2 id="accountDrawerTitle">账号详情</h2><p id="accountDrawerSubtitle"></p></div><button class="close-button" type="button" data-close-drawer aria-label="关闭账号详情">关闭</button></header>
+    <div class="drawer-body" id="accountDrawerBody"></div>
+  </aside>
+  <aside class="drawer hidden" id="runDrawer" role="dialog" aria-modal="true" aria-labelledby="runDrawerTitle">
+    <header class="drawer-header"><div><h2 id="runDrawerTitle">运行详情</h2><p id="runDrawerSubtitle"></p></div><button class="close-button" type="button" data-close-drawer aria-label="关闭运行详情">关闭</button></header>
+    <div class="drawer-body" id="runDrawerBody"></div>
+  </aside>
+
+  <div class="dialog-backdrop hidden" id="confirmDialog" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmMessage">
+    <div class="confirm-dialog"><h2 id="confirmTitle">确认操作</h2><p id="confirmMessage"></p><div id="confirmContext" class="confirm-context hidden"></div><div class="dialog-actions"><button class="button secondary" id="confirmCancel" type="button">取消</button><button class="button primary" id="confirmProceed" type="button">确认</button></div></div>
+  </div>
+
+  <div class="dialog-backdrop hidden" id="oauthAppDialog" role="dialog" aria-modal="true" aria-labelledby="oauthAppTitle">
+    <form class="confirm-dialog secret-dialog" id="oauthAppForm" novalidate autocomplete="off">
+      <h2 id="oauthAppTitle">配置 X Developer App</h2>
+      <p>Client ID 与 Client Secret 只单向提交到写入服务，保存后不能读取。</p>
+      <label>Client ID<input name="client_id" type="password" autocomplete="new-password" required></label>
+      <label>Client Secret<input name="client_secret" type="password" autocomplete="new-password"><small>已配置时可留空以保留原值；此前发到聊天中的 Secret 请先在 X Portal 重新生成。</small></label>
+      <div class="field-error" id="oauthAppError"></div>
+      <div class="dialog-actions"><button class="button secondary" type="button" data-close-secret-dialog>取消</button><button class="button primary" type="submit">安全保存</button></div>
+    </form>
+  </div>
+
+  <div class="dialog-backdrop hidden" id="oauth1Dialog" role="dialog" aria-modal="true" aria-labelledby="oauth1Title">
+    <form class="confirm-dialog secret-dialog" id="oauth1Form" novalidate autocomplete="off">
+      <h2 id="oauth1Title">使用 OAuth 1.0a 凭据</h2>
+      <p>兼容入口：服务会先调用 <code>/2/users/me</code> 验证身份，成功后才保存。不会要求填写账号标识。</p>
+      <label>关联 Windows Profile<select name="source_profile_id" id="oauth1ProfileSelect"></select></label>
+      <label>绑定现有写入账号（可选）<select name="account_id" id="oauth1AccountSelect"></select></label>
+      <label>显示名称<input name="display_name" maxlength="120" autocomplete="off"></label>
+      <label>API Key<input name="consumer_key" type="password" autocomplete="new-password" required></label>
+      <label>API Key Secret<input name="consumer_secret" type="password" autocomplete="new-password" required></label>
+      <label>Access Token<input name="access_token" type="password" autocomplete="new-password" required></label>
+      <label>Access Token Secret<input name="access_token_secret" type="password" autocomplete="new-password" required></label>
+      <div class="field-error" id="oauth1Error"></div>
+      <div class="dialog-actions"><button class="button secondary" type="button" data-close-secret-dialog>取消</button><button class="button primary" type="submit">验证并保存</button></div>
+    </form>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+</html>

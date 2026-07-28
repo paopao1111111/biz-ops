@@ -1,0 +1,22 @@
+{
+  "_comment": "AdsPower 链式代理映射示例。真实凭据/IP 在飞书敏感清单与 xray config，本文件只记录结构。",
+  "xray_config_paths": {
+    "mac": "~/Library/Application Support/acc-rpa/mac-xray-chains/config.json",
+    "windows": "C:\\acc-rpa\\v2ray-config\\config.json (计划任务 ACC RPA Xray)"
+  },
+  "main_outbound": {
+    "inbound": "127.0.0.1:10808 (mixed)",
+    "type": "trojan",
+    "node": "机场订阅节点（会轮换，以 v2rayN 当前订阅为准）"
+  },
+  "chains": [
+    {"port": 10810, "tag": "ads-chain-10", "account": "Pixel Mara",  "profile_id": "k1euo8fi", "exit": "REPLACE_RESIDENTIAL_IP:62000"},
+    {"port": 10811, "tag": "ads-chain-11", "account": "Sato Reyes",  "profile_id": "k1euo8xv", "exit": "REPLACE_RESIDENTIAL_IP:62000"},
+    {"port": 10812, "tag": "ads-chain-12", "account": "Kernel Finn", "profile_id": "k1euo99l", "exit": "REPLACE_RESIDENTIAL_IP:62000"},
+    {"port": 10813, "tag": "ads-chain-13", "account": "Ink Sullivan","profile_id": "k1euo9qv", "exit": "REPLACE_RESIDENTIAL_IP:62000"},
+    {"port": 10814, "tag": "ads-chain-14", "account": "Justice Wren","profile_id": "k1euo9xd", "exit": "REPLACE_RESIDENTIAL_IP:62000"},
+    {"port": 10815, "tag": "ads-chain-15", "account": "Echo Vale",   "profile_id": "k1euoaa0", "exit": "REPLACE_RESIDENTIAL_IP:62000"},
+    {"port": 10816, "tag": "ads-chain-16", "account": "New X 02",    "profile_id": "k1evtcb8", "exit": "REPLACE_RESIDENTIAL_IP:62000"}
+  ],
+  "notes": "Earl Leedy (k1f2qx1l) 与 New X 03-05 的绑定以 console.db accounts.proxy_port 为准；凭据轮换后同步更新本映射与两处 xray config。"
+}

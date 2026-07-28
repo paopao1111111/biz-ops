@@ -1,0 +1,23 @@
+{
+  "database_path": "/var/lib/x-write-service/write.db",
+  "hmac_secret": "replace-with-at-least-32-random-bytes",
+  "bind_host": "127.0.0.1",
+  "bind_port": 8791,
+  "max_body_bytes": 65536,
+  "auth_max_skew_seconds": 300,
+  "nonce_ttl_seconds": 600,
+  "secrets_path": "/var/lib/x-write-service/credentials.json",
+  "x_api_base_url": "https://api.x.com",
+  "x_api_proxy_url": null,
+  "x_api_timeout_seconds": 20,
+  "executor_enabled": true,
+  "executor_tick_seconds": 5,
+  "operation_lease_seconds": 300,
+  "verify_ttl_seconds": 3600,
+  "approval_ttl_seconds": 3600,
+  "oauth_callback_url": "https://oauth.example.com/oauth/x/callback",
+  "oauth_authorize_url": "https://x.com/i/oauth2/authorize",
+  "oauth_token_url": "https://api.x.com/2/oauth2/token",
+  "oauth_flow_ttl_seconds": 600,
+  "oauth_refresh_leeway_seconds": 300
+}

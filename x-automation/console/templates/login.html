@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>登录 · X 账号浏览控制台</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <h1 id="loginTitle">X 账号浏览控制台</h1>
+      <p class="login-description">请输入管理员密码进入系统。</p>
+      <div class="login-error {{ERROR_CLASS}}" role="alert">{{LOGIN_ERROR}}</div>
+      <form class="login-form" method="post" action="/login">
+        <label for="password">管理员密码</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+        <button class="button primary" type="submit">登录</button>
+      </form>
+      <p class="readonly-note"><strong>严格只读</strong>：仅查看公开内容，不进行账号互动。</p>
+    </section>
+  </main>
+</body>
+</html>

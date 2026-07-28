@@ -1,0 +1,31 @@
+[Unit]
+Description=X/Twitter Read-Only Browse Console
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=x-browse-console
+Group=x-browse-console
+WorkingDirectory=/opt/x-browse-console
+EnvironmentFile=/etc/x-browse-console.env
+Environment=X_CONSOLE_HOST=0.0.0.0
+Environment=X_CONSOLE_PORT=8790
+ExecStart=/usr/bin/python3.11 app.py
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+ReadWritePaths=/opt/x-browse-console/data
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

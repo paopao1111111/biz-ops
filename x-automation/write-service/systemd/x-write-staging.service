@@ -1,0 +1,20 @@
+[Unit]
+Description=X Write Paused Foundation (staging)
+After=network.target
+
+[Service]
+Type=simple
+User=x-write
+Group=x-write
+WorkingDirectory=/opt/x-write-staging
+ExecStart=/usr/bin/python3.11 -m x_write --config /etc/x-write-staging.json
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/x-write-staging
+
+[Install]
+WantedBy=multi-user.target
