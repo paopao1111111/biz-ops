@@ -1,0 +1,603 @@
+[
+  {
+    "id": 1,
+    "scenario": "关于套餐升级",
+    "keywords": [
+      "upgrade plan",
+      "upgrade your plan",
+      "upgrade to annual",
+      "change to annual plan",
+      "change to annual",
+      "annual plan",
+      "annualy payment",
+      "annually payment",
+      "yearly plan",
+      "yearly subscription",
+      "switch to annual",
+      "switch plan",
+      "change plan",
+      "monthly payment plan",
+      "monthly plan",
+      "pricing page",
+      "套餐升级",
+      "升级套餐",
+      "月付改年付",
+      "改成年付",
+      "年付套餐",
+      "切换年付",
+      "升级到年付"
+    ],
+    "template": "Hi,\nThank you for reaching out.\nYes, you can upgrade your plan directly by paying only the price difference between your current plan and the new plan.\nPlease visit our pricing page here to choose the plan you’d like to upgrade to:\nhttps://www.iweaver.ai/pricing/\nIf you have any trouble during the upgrade process, please feel free to let us know, and we’ll be happy to help.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hi,\nThank you for reaching out.\nYes, you can upgrade your plan directly by paying only the price difference between your current plan and the new plan.\nPlease visit our pricing page here to choose the plan you’d like to upgrade to:\nhttps://www.iweaver.ai/pricing/\nIf you have any trouble during the upgrade process, please feel free to let us know, and we’ll be happy to help.\nBest regards,\niWeaver Team",
+      "de": "Hallo,\n\nvielen Dank für Ihre Nachricht.\n\nJa, Sie können Ihren Plan direkt upgraden, indem Sie nur die Preisdifferenz zwischen Ihrem aktuellen Plan und dem neuen Plan bezahlen.\n\nBitte besuchen Sie unsere Preisseite und wählen Sie dort den Plan aus, auf den Sie upgraden möchten:\nhttps://www.iweaver.ai/pricing/\n\nWenn Sie während des Upgrade-Vorgangs auf Probleme stoßen, antworten Sie bitte auf diese E-Mail. Wir helfen Ihnen gerne weiter.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 2,
+    "scenario": "用户询问关于如何迁移旧版channel",
+    "keywords": [
+      "old channel",
+      "old channels",
+      "previous channel",
+      "previous channels",
+      "legacy channel",
+      "migrate channel",
+      "migrate old channel",
+      "channel migration",
+      "channel missing",
+      "channels missing",
+      "old iweaver",
+      "new dashboard",
+      "旧版channel",
+      "旧版本channel",
+      "旧channel",
+      "迁移channel",
+      "channel迁移",
+      "历史channel",
+      "原来的channel"
+    ],
+    "template": "Hi ,\nThank you for reaching out, and we’re very sorry for the inconvenience.\niWeaver was recently updated, and the new version uses a different data storage and permission management structure. To protect user data security and prevent old channels from being incorrectly linked to another account, old channels cannot be automatically brought into the new iWeaver dashboard at this time.\nYour old channels have not been deleted. You can continue to access them through the “old iWeaver” entry at the bottom of the left sidebar. From there, you can review your previous channels and manually copy or organize any important content into the new iWeaver dashboard if needed.\nWe understand this may create extra work for you, and we sincerely apologize for the inconvenience. Thank you for your patience and understanding.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hi ,\nThank you for reaching out, and we’re very sorry for the inconvenience.\niWeaver was recently updated, and the new version uses a different data storage and permission management structure. To protect user data security and prevent old channels from being incorrectly linked to another account, old channels cannot be automatically brought into the new iWeaver dashboard at this time.\nYour old channels have not been deleted. You can continue to access them through the “old iWeaver” entry at the bottom of the left sidebar. From there, you can review your previous channels and manually copy or organize any important content into the new iWeaver dashboard if needed.\nWe understand this may create extra work for you, and we sincerely apologize for the inconvenience. Thank you for your patience and understanding.\nBest regards,\niWeaver Team",
+      "de": "Hallo,\n\nvielen Dank für Ihre Nachricht. Es tut uns sehr leid für die Unannehmlichkeiten.\n\niWeaver wurde kürzlich aktualisiert. Die neue Version verwendet eine andere Daten- und Berechtigungsstruktur. Um die Sicherheit der Nutzerdaten zu schützen und zu verhindern, dass alte Channels versehentlich mit einem falschen Konto verknüpft werden, können alte Channels derzeit nicht automatisch in das neue iWeaver-Dashboard übernommen werden.\n\nIhre alten Channels wurden nicht gelöscht. Sie können weiterhin über den Eintrag „old iWeaver“ unten in der linken Seitenleiste darauf zugreifen. Dort können Sie Ihre früheren Channels ansehen und wichtige Inhalte bei Bedarf manuell in das neue Dashboard kopieren oder organisieren.\n\nWir entschuldigen uns nochmals für die zusätzlichen Umstände und danken Ihnen für Ihr Verständnis.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 3,
+    "scenario": "用户咨询chat记录消失的问题",
+    "keywords": [
+      "missing chats",
+      "chats missing",
+      "chat missing",
+      "chat history missing",
+      "chat records missing",
+      "chat record missing",
+      "lost chats",
+      "conversation history",
+      "old chat history",
+      "previous chat",
+      "my channels are gone",
+      "everything is missing",
+      "canales chats",
+      "chats todo quedó en blanco",
+      "聊天记录",
+      "chat记录",
+      "记录消失",
+      "聊天消失",
+      "历史聊天",
+      "找不到聊天",
+      "chat不见了",
+      "chats are missing",
+      "channels are missing",
+      "channels and chats",
+      "channels and chats are missing",
+      "records are missing",
+      "chat records disappeared",
+      "channels disappeared",
+      "canales desaparecieron",
+      "todo quedó en blanco",
+      "todo quedo en blanco",
+      "chatverlauf",
+      "chat verlauf",
+      "chatverläufe",
+      "chatverlaufe",
+      "chatverlauf verschwunden",
+      "chats verschwunden",
+      "alte chats",
+      "alter chatverlauf",
+      "in den chat kopieren",
+      "analysen in den chat",
+      "zusammenfassungen in den chat",
+      "zusammenfassungen oder analysen",
+      "detaillierte anleitung",
+      "ich komme nicht ganz klar"
+    ],
+    "template": "Hi,\nWe’re very sorry for the inconvenience, and thank you for your patience and understanding.\nWe recently upgraded our server and Chat system. The new version uses a different data storage and permission management structure. To protect user data security, account permissions, and prevent historical conversations from being incorrectly linked to another account, old chat records cannot be automatically synced into the new Chat at this time.\nPlease rest assured that your previous chat history has not been simply deleted. We will provide an access point for the old version of Chat history, which is expected to become available within the next 2–3 days. Once it is available, you can find it at the bottom of the left sidebar. You’ll be able to review your previous conversations there and manually copy or organize any important content into the new Chat if needed.\nWe sincerely apologize again for the inconvenience and truly appreciate your understanding.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hi,\nWe’re very sorry for the inconvenience, and thank you for your patience and understanding.\nWe recently upgraded our server and Chat system. The new version uses a different data storage and permission management structure. To protect user data security, account permissions, and prevent historical conversations from being incorrectly linked to another account, old chat records cannot be automatically synced into the new Chat at this time.\nPlease rest assured that your previous chat history has not been simply deleted. We will provide an access point for the old version of Chat history, which is expected to become available within the next 2–3 days. Once it is available, you can find it at the bottom of the left sidebar. You’ll be able to review your previous conversations there and manually copy or organize any important content into the new Chat if needed.\nWe sincerely apologize again for the inconvenience and truly appreciate your understanding.\nBest regards,\niWeaver Team",
+      "de": "Hallo,\n\nes tut uns sehr leid für die Unannehmlichkeiten und vielen Dank für Ihre Geduld und Ihr Verständnis.\n\nWir haben kürzlich unser Server- und Chat-System aktualisiert. Die neue Version verwendet eine andere Daten- und Berechtigungsstruktur. Zum Schutz der Datensicherheit, der Kontoberechtigungen und um zu verhindern, dass frühere Unterhaltungen versehentlich mit einem anderen Konto verknüpft werden, können alte Chatverläufe derzeit nicht automatisch in den neuen Chat synchronisiert werden.\n\nBitte seien Sie versichert, dass Ihr bisheriger Chatverlauf nicht einfach gelöscht wurde. Wir stellen einen Zugang zur alten Chat-Historie bereit, der voraussichtlich innerhalb von 2–3 Tagen verfügbar sein wird. Sobald er verfügbar ist, finden Sie ihn unten in der linken Seitenleiste. Dort können Sie Ihre früheren Unterhaltungen einsehen und wichtige Inhalte bei Bedarf manuell in den neuen Chat kopieren oder organisieren.\n\nWir entschuldigen uns nochmals aufrichtig für die Unannehmlichkeiten und danken Ihnen sehr für Ihr Verständnis.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 4,
+    "scenario": "关于取消订阅",
+    "keywords": [
+      "cancel subscription",
+      "how to cancel",
+      "cancel my subscription",
+      "cancel my plan",
+      "stop subscription",
+      "unsubscribe from my plan",
+      "取消订阅",
+      "怎么取消",
+      "取消会员",
+      "取消套餐",
+      "cancelar suscripción",
+      "cancelar suscripcion"
+    ],
+    "template": "Hi there,\nThank you for reaching out to us.\nWe’re sorry to hear that your experience didn’t fully meet your expectations.\nYou can cancel your subscription by following these steps:\n• Click your account avatar in the bottom-left corner\n• Go to Billing\n• Select Cancel Subscription\nIf you need any assistance during the process or have further questions, please don’t hesitate to reach out — we’re always happy to help.\nWarm regards,\niWeaver Team",
+    "templates": {
+      "en": "Hi there,\nThank you for reaching out to us.\nWe’re sorry to hear that your experience didn’t fully meet your expectations.\nYou can cancel your subscription by following these steps:\n• Click your account avatar in the bottom-left corner\n• Go to Billing\n• Select Cancel Subscription\nIf you need any assistance during the process or have further questions, please don’t hesitate to reach out — we’re always happy to help.\nWarm regards,\niWeaver Team",
+      "zh": "您可以自行取消订阅，操作路径如下：\n  点击页面左下角的账户图标\n  进入 Billing（账单） 页面\n  在页面中选择 取消订阅 即可\n如果在操作过程中遇到任何问题，请随时联系我们。",
+      "de": "Hallo,\n\nvielen Dank für Ihre Nachricht. Es tut uns leid, dass Ihre Erfahrung nicht vollständig Ihren Erwartungen entsprochen hat.\n\nSie können Ihr Abonnement selbst kündigen:\n• Klicken Sie unten links auf Ihr Konto-/Avatar-Symbol\n• Gehen Sie zu Billing\n• Wählen Sie Cancel Subscription\n\nWenn Sie während des Vorgangs Hilfe benötigen oder weitere Fragen haben, antworten Sie bitte auf diese E-Mail. Wir helfen Ihnen gerne weiter.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 5,
+    "scenario": "取消订阅",
+    "keywords": [],
+    "template": "Hi there,\nThanks for reaching out.\nWe've canceled your subscription on our end successfully.\nYou won’t be charged again, and the subscription will not renew starting from next month.\nIf you have any other questions or need further assistance, feel free to let us know — we’re happy to help.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hi there,\nThanks for reaching out.\nWe've canceled your subscription on our end successfully.\nYou won’t be charged again, and the subscription will not renew starting from next month.\nIf you have any other questions or need further assistance, feel free to let us know — we’re happy to help.\nBest regards,\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "manual_only": true,
+    "delivery_policy": "manual"
+  },
+  {
+    "id": 6,
+    "scenario": "关于帐户点数的解释",
+    "keywords": [
+      "credits",
+      "account credits",
+      "what are credits",
+      "credit balance",
+      "monthly credits",
+      "points",
+      "点数",
+      "积分",
+      "账户点数",
+      "账号点数",
+      "créditos",
+      "creditos"
+    ],
+    "template": "Dear User,\nThank you for reaching out to us.\nRegarding your question about Account Credits, I am happy to provide some clarification.\nThese credits are primarily used for the processing and computation of large documents. Because handling long-form text and complex data requires significant computational resources, this system ensures a stable and high-quality experience for all our users.\nHere are the key details regarding your quota:\nMonthly Allowance: Your account is credited with 5,000 points every month.\nAutomatic Reset: This balance refreshes automatically at the start of each billing cycle.\nUsage Outlook: Please rest assured that 5,000 points are designed to comfortably cover extensive daily tasks and deep research needs. You can continue your work without any concern about running out during your typical workflow.\nIf you have any further questions about your usage or need assistance with a specific project, please don't hesitate to let us know.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Dear User,\nThank you for reaching out to us.\nRegarding your question about Account Credits, I am happy to provide some clarification.\nThese credits are primarily used for the processing and computation of large documents. Because handling long-form text and complex data requires significant computational resources, this system ensures a stable and high-quality experience for all our users.\nHere are the key details regarding your quota:\nMonthly Allowance: Your account is credited with 5,000 points every month.\nAutomatic Reset: This balance refreshes automatically at the start of each billing cycle.\nUsage Outlook: Please rest assured that 5,000 points are designed to comfortably cover extensive daily tasks and deep research needs. You can continue your work without any concern about running out during your typical workflow.\nIf you have any further questions about your usage or need assistance with a specific project, please don't hesitate to let us know.\nBest regards,\niWeaver Team",
+      "de": "Hallo,\n\nvielen Dank für Ihre Nachricht. Gerne erklären wir Ihnen die Account Credits.\n\nDiese Credits werden hauptsächlich für die Verarbeitung und Berechnung großer Dokumente verwendet. Lange Texte und komplexe Daten benötigen mehr Rechenressourcen; das Credit-System hilft dabei, eine stabile und hochwertige Nutzungserfahrung sicherzustellen.\n\nIhr Konto erhält monatlich 5.000 Credits. Dieses Guthaben wird zu Beginn jedes Abrechnungszyklus automatisch erneuert und ist für umfangreiche tägliche Aufgaben und Deep-Research-Anforderungen ausgelegt.\n\nWenn Sie Fragen zu Ihrem Verbrauch oder zu einem bestimmten Projekt haben, lassen Sie es uns bitte wissen.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 7,
+    "scenario": "要求退款",
+    "keywords": [
+      "refund",
+      "refund request",
+      "money back",
+      "full amount returned",
+      "chargeback",
+      "退款",
+      "退费",
+      "申请退款",
+      "退钱",
+      "reembolso",
+      "devolución",
+      "devolucion"
+    ],
+    "template": "Hello,\n\nWe received your refund request and will have our support team review it manually. This message does not confirm approval or promise a processing time.\n\nPlease reply with any relevant order or payment details.\n\nThank you.",
+    "templates": {
+      "en": "Hello,\n\nWe received your refund request and will have our support team review it manually. This message does not confirm approval or promise a processing time.\n\nPlease reply with any relevant order or payment details.\n\nThank you.",
+      "zh": "您好，\n\n我们已收到您的退款请求，并会交由客服团队人工核实。本消息不代表退款已获批准，也不承诺具体处理时间。\n\n如需补充订单或付款信息，请直接回复此邮件。\n\n谢谢。",
+      "de": "Hallo,\n\nwir haben Ihre Rückerstattungsanfrage erhalten. Unser Support-Team wird sie manuell prüfen. Diese Nachricht bestätigt keine Genehmigung und verspricht keine Bearbeitungszeit.\n\nBitte antworten Sie mit relevanten Bestell- oder Zahlungsdaten.\n\nVielen Dank."
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "draft",
+    "manual_only": true
+  },
+  {
+    "id": 8,
+    "scenario": "关于Bug反馈",
+    "keywords": [
+      "bug",
+      "error",
+      "not working",
+      "broken",
+      "issue with",
+      "problem with",
+      "something wrong",
+      "问题",
+      "错误",
+      "不能用",
+      "出错",
+      "故障",
+      "no funciona",
+      "problema",
+      "pdf dateien",
+      "keine gesendet bekommen",
+      "nicht gesendet bekommen",
+      "chatanalysen",
+      "dateien nicht erhalten",
+      "pdf nicht erhalten"
+    ],
+    "template": "Thank you very much for bringing this issue to our attention. We truly appreciate your feedback, as it helps us improve our service and provide a better experience for all our users.\nOur team is already reviewing the bug, and we will work to resolve it as quickly as possible. We’ll keep you updated once it has been fixed.\nThanks again for your support and understanding.",
+    "templates": {
+      "en": "Thank you very much for bringing this issue to our attention. We truly appreciate your feedback, as it helps us improve our service and provide a better experience for all our users.\nOur team is already reviewing the bug, and we will work to resolve it as quickly as possible. We’ll keep you updated once it has been fixed.\nThanks again for your support and understanding.",
+      "zh": "非常感谢您向我们反映此问题。我们非常感谢您的反馈，这有助于我们改进服务，并为所有用户提供更好的体验。\n我们的团队正在审核该错误，并将尽快修复。修复完成后，我们会及时通知您。\n再次感谢您的支持和理解。",
+      "de": "Vielen Dank, dass Sie uns auf dieses Problem aufmerksam gemacht haben. Wir wissen Ihr Feedback sehr zu schätzen, da es uns hilft, unseren Service zu verbessern und allen Nutzerinnen und Nutzern eine bessere Erfahrung zu bieten.\n\nUnser Team prüft den Fehler bereits und wird daran arbeiten, ihn so schnell wie möglich zu beheben. Wir informieren Sie, sobald das Problem gelöst wurde.\n\nVielen Dank nochmals für Ihre Unterstützung und Ihr Verständnis."
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 9,
+    "scenario": "Bug修复后的跟进",
+    "keywords": [],
+    "template": "We’re happy to inform you that the issue you reported has now been resolved. Thank you again for your feedback, which helped us identify and fix the problem quickly.\nYou can now try using the feature again here:\n 👉https://www.iweaver.ai/\nIf you still encounter any issues, it may be due to your browser cache. In that case, we recommend:\n  1. Clearing your browser cache and trying again.\n  2. Switching to another browser – we recommend Google Chrome for the best experience.\nWe appreciate your patience and support. Please let us know if you experience any further issues.\nBest regards,",
+    "templates": {
+      "en": "We’re happy to inform you that the issue you reported has now been resolved. Thank you again for your feedback, which helped us identify and fix the problem quickly.\nYou can now try using the feature again here:\n 👉https://www.iweaver.ai/\nIf you still encounter any issues, it may be due to your browser cache. In that case, we recommend:\n  1. Clearing your browser cache and trying again.\n  2. Switching to another browser – we recommend Google Chrome for the best experience.\nWe appreciate your patience and support. Please let us know if you experience any further issues.\nBest regards,",
+      "zh": "我们很高兴地通知您，您报告的问题现已解决。再次感谢您的反馈，这帮助我们快速识别并解决问题。\n您现在可以在此处再次尝试使用该功能：\n 👉 [插入 URL]\n如果您仍然遇到问题，可能是由于浏览器缓存造成的。在这种情况下，我们建议：\n  1、清除浏览器缓存并重试。\n  2、切换到其他浏览器 – 我们推荐使用Google Chrome以获得最佳体验。\n \n感谢您的耐心和支持。如果您遇到任何其他问题，请告知我们。"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "manual_only": true,
+    "delivery_policy": "manual"
+  },
+  {
+    "id": 10,
+    "scenario": "验证码不显示的问题",
+    "keywords": [
+      "captcha",
+      "verification code",
+      "code not displaying",
+      "code is not showing",
+      "cannot see code",
+      "login verification",
+      "验证码",
+      "验证码不显示",
+      "收不到验证码",
+      "看不到验证码",
+      "验证代码",
+      "código de verificación",
+      "codigo de verificacion"
+    ],
+    "template": "Hello,\nThank you for reaching out to us and for letting us know about this issue. We’re sorry for the inconvenience this may have caused.\nThis issue may be related to your browser cache or temporary browser data. In this case, we kindly suggest trying the following steps:\nClear your browser cache and cookies, then refresh the page and try again.\nSwitch to a different browser. For the best experience, we recommend using Google Chrome.\nIf the issue persists after trying the above steps, please let us know. You may also share a screenshot or any error message you see, which will help us further investigate and assist you more efficiently.\nThank you very much for your patience and understanding. We truly appreciate your support and are always here to help.\nBest regards,\niWeaver Support Team",
+    "templates": {
+      "en": "Hello,\nThank you for reaching out to us and for letting us know about this issue. We’re sorry for the inconvenience this may have caused.\nThis issue may be related to your browser cache or temporary browser data. In this case, we kindly suggest trying the following steps:\nClear your browser cache and cookies, then refresh the page and try again.\nSwitch to a different browser. For the best experience, we recommend using Google Chrome.\nIf the issue persists after trying the above steps, please let us know. You may also share a screenshot or any error message you see, which will help us further investigate and assist you more efficiently.\nThank you very much for your patience and understanding. We truly appreciate your support and are always here to help.\nBest regards,\niWeaver Support Team",
+      "zh": "这可能是由于您的浏览器缓存导致的。建议您尝试以下操作：\n清理浏览器缓存后重新尝试；\n更换其他浏览器——我们推荐使用 Google Chrome 浏览器以获得最佳体验。\n感谢您的耐心与支持。若仍有问题，请随时与我们联系。\n此致\n敬礼！",
+      "de": "Hallo,\n\nvielen Dank, dass Sie uns kontaktiert und auf dieses Problem hingewiesen haben. Es tut uns leid für die Unannehmlichkeiten.\n\nDas Problem kann mit dem Browser-Cache oder temporären Browserdaten zusammenhängen. Bitte versuchen Sie Folgendes:\n\n1. Löschen Sie Cache und Cookies Ihres Browsers, aktualisieren Sie die Seite und versuchen Sie es erneut.\n2. Wechseln Sie zu einem anderen Browser. Für die beste Nutzung empfehlen wir Google Chrome.\n\nWenn das Problem weiterhin besteht, senden Sie uns bitte einen Screenshot oder die angezeigte Fehlermeldung. So können wir es schneller prüfen.\n\nVielen Dank für Ihre Geduld und Ihr Verständnis.\n\nMit freundlichen Grüßen\niWeaver Support Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "auto",
+    "manual_only": false
+  },
+  {
+    "id": 11,
+    "scenario": "新需求反馈",
+    "keywords": [
+      "feature request",
+      "suggestion",
+      "new feature",
+      "request a feature",
+      "product suggestion",
+      "建议",
+      "新功能",
+      "需求反馈",
+      "功能建议",
+      "sugerencia",
+      "nueva función",
+      "nueva funcion"
+    ],
+    "template": "Thank you for sharing your suggestion with us. We really appreciate your input, as it helps us improve our product and better serve our users.\nWe have forwarded your request to our product team for review and consideration. While we cannot guarantee an immediate implementation, please know that your feedback is valuable and will be taken into account for future updates.\nThanks again for your support and for helping us make our product better.",
+    "templates": {
+      "en": "Thank you for sharing your suggestion with us. We really appreciate your input, as it helps us improve our product and better serve our users.\nWe have forwarded your request to our product team for review and consideration. While we cannot guarantee an immediate implementation, please know that your feedback is valuable and will be taken into account for future updates.\nThanks again for your support and for helping us make our product better.",
+      "zh": "感谢您与我们分享您的建议。我们非常重视您的意见，因为它有助于我们改进产品，更好地服务用户。\n我们已将您的请求转发给产品团队进行审核和考量。虽然我们无法保证立即实施，但请您理解，您的反馈非常宝贵，我们会在未来的更新中予以考虑。\n再次感谢您的支持并帮助我们改进产品。",
+      "de": "Vielen Dank, dass Sie Ihren Vorschlag mit uns teilen. Wir wissen Ihr Feedback sehr zu schätzen, da es uns hilft, unser Produkt zu verbessern und unsere Nutzerinnen und Nutzer besser zu unterstützen.\n\nWir haben Ihre Anfrage an unser Produktteam zur Prüfung weitergeleitet. Auch wenn wir keine sofortige Umsetzung garantieren können, ist Ihr Feedback für uns sehr wertvoll und wird bei zukünftigen Updates berücksichtigt.\n\nVielen Dank nochmals für Ihre Unterstützung."
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 12,
+    "scenario": "需求上线后跟进",
+    "keywords": [],
+    "template": "We’re excited to let you know that the feature you suggested is now available! Thank you again for your valuable feedback—it helped us prioritize and improve our product.\nYou can try it out here:\n 👉 [Insert URL]\nWe’d love to hear your thoughts once you’ve had a chance to use it. Your feedback continues to help us make the product even better!\nBest regards,",
+    "templates": {
+      "en": "We’re excited to let you know that the feature you suggested is now available! Thank you again for your valuable feedback—it helped us prioritize and improve our product.\nYou can try it out here:\n 👉 [Insert URL]\nWe’d love to hear your thoughts once you’ve had a chance to use it. Your feedback continues to help us make the product even better!\nBest regards,",
+      "zh": "我们很高兴地通知您，您建议的功能现已上线！再次感谢您的宝贵反馈——它帮助我们确定了产品的优先级并进行了改进。\n您可以在这里尝试一下：\n 👉 [插入网址]\n我们很乐意听取您使用后的反馈。您的反馈将帮助我们不断改进产品！"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "manual_only": true,
+    "delivery_policy": "manual"
+  },
+  {
+    "id": 13,
+    "scenario": "询问 折扣码",
+    "keywords": [
+      "discount",
+      "coupon",
+      "promo code",
+      "student discount",
+      "partner discount",
+      "affiliate program",
+      "折扣",
+      "优惠码",
+      "学生折扣",
+      "合作伙伴",
+      "推广佣金"
+    ],
+    "template": "Thanks for your interest!\nWe currently offer an 20% student discount. If you’re a student, just provide your school email and I’ll activate the discount for you.\nWe also have a partner/affiliate program, which includes a 10% discount for your audience and a 10% commission for you as the promoter.\nPlease let me know which option works better for you, and I’ll be happy to help you proceed!",
+    "templates": {
+      "en": "Thanks for your interest!\nWe currently offer an 20% student discount. If you’re a student, just provide your school email and I’ll activate the discount for you.\nWe also have a partner/affiliate program, which includes a 10% discount for your audience and a 10% commission for you as the promoter.\nPlease let me know which option works better for you, and I’ll be happy to help you proceed!",
+      "zh": "感谢您的关注！\n我们目前提供20%的学生折扣。如果您是学生，只需提供您的学校邮箱地址，我就会帮您激活折扣。\n我们还有一个合作伙伴/附属计划，其中包括为您的观众提供10% 的折扣，并为您作为推广者提供10% 的佣金。\n请让我知道哪种选择更适合您，我很乐意帮助您继续！",
+      "de": "Vielen Dank für Ihr Interesse!\n\nDerzeit bieten wir einen Studentenrabatt von 20 % an. Wenn Sie Student/in sind, senden Sie uns bitte Ihre Hochschul-E-Mail-Adresse, dann helfen wir Ihnen bei der Aktivierung des Rabatts.\n\nAußerdem haben wir ein Partner-/Affiliate-Programm mit 10 % Rabatt für Ihr Publikum und 10 % Provision für Sie als Empfehlungsgeber.\n\nBitte lassen Sie uns wissen, welche Option für Sie passt. Wir helfen Ihnen gerne weiter!"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 14,
+    "scenario": "删除账户",
+    "keywords": [
+      "delete account",
+      "remove account",
+      "close account",
+      "delete my account",
+      "account deletion",
+      "删除账户",
+      "注销账户",
+      "删除账号",
+      "注销",
+      "eliminar cuenta",
+      "borrar cuenta"
+    ],
+    "template": "Hello,\nYou can delete your account directly from your account settings.\nPlease follow these steps:\nLog in to your account\nGo to Settings\nClick Account\nSelect Delete Account and confirm\nIf you encounter any issues or need further assistance, feel free to let us know.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hello,\nYou can delete your account directly from your account settings.\nPlease follow these steps:\nLog in to your account\nGo to Settings\nClick Account\nSelect Delete Account and confirm\nIf you encounter any issues or need further assistance, feel free to let us know.\nBest regards,\niWeaver Team",
+      "de": "Hallo,\n\nSie können Ihr Konto direkt in den Kontoeinstellungen löschen.\n\nBitte folgen Sie diesen Schritten:\n1. Melden Sie sich in Ihrem Konto an\n2. Gehen Sie zu Settings\n3. Klicken Sie auf Account\n4. Wählen Sie Delete Account und bestätigen Sie\n\nWenn Sie auf Probleme stoßen oder weitere Hilfe benötigen, antworten Sie bitte auf diese E-Mail.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 15,
+    "scenario": "关于用户反馈的问题不清晰，需要提供截图的",
+    "keywords": [
+      "screenshot",
+      "send screenshot",
+      "provide screenshot",
+      "more details",
+      "current status of my account",
+      "access issue",
+      "pro membership activated",
+      "截图",
+      "提供截图",
+      "问题不清晰",
+      "更多细节",
+      "账户状态",
+      "captura de pantalla"
+    ],
+    "template": "Thank you for your message, and we’re truly sorry for the issue you’re experiencing with your access.\nTo help us better understand the situation and resolve it as quickly as possible, could you please send us a screenshot showing the message or the current status of your account? This will allow us to check whether your PRO membership has been successfully activated on our end.\nWe remain at your disposal and will take immediate action once we receive your reply.\nBest regards,",
+    "templates": {
+      "en": "Thank you for your message, and we’re truly sorry for the issue you’re experiencing with your access.\nTo help us better understand the situation and resolve it as quickly as possible, could you please send us a screenshot showing the message or the current status of your account? This will allow us to check whether your PRO membership has been successfully activated on our end.\nWe remain at your disposal and will take immediate action once we receive your reply.\nBest regards,",
+      "zh": "感谢您的留言，对于您在使用服务时遇到的问题，我们深表歉意。\n为了帮助我们更好地了解情况并尽快解决问题，请您提供显示该消息或您当前账户状态的屏幕截图。这将有助于我们确认您的专业会员资格是否已在我们这边成功激活。\n我们将随时听候您的差遣，一旦收到您的回复，我们将立即采取行动。",
+      "de": "Vielen Dank für Ihre Nachricht. Es tut uns sehr leid, dass Sie ein Problem haben.\n\nDamit wir die Situation besser verstehen und so schnell wie möglich lösen können, senden Sie uns bitte einen Screenshot mit der Meldung oder dem aktuellen Status Ihres Kontos. Dadurch können wir prüfen, ob Ihre PRO-Mitgliedschaft auf unserer Seite korrekt aktiviert wurde.\n\nSobald wir Ihre Antwort erhalten, werden wir den Fall weiter prüfen.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 16,
+    "scenario": "关于bug已经修复，并且赠送会员给对方的",
+    "keywords": [],
+    "template": "We’re happy to inform you that the issue you reported has now been resolved.\n Thank you again for your feedback — it helped us identify and fix the problem quickly.\nAs a token of our appreciation, we’ve added 15 days of Pro membership to your account balance automatically.\n We truly appreciate your understanding and support.\nIf you encounter any other issues, please don’t hesitate to reach out — we’re always here to help.\nBest regards,",
+    "templates": {
+      "en": "We’re happy to inform you that the issue you reported has now been resolved.\n Thank you again for your feedback — it helped us identify and fix the problem quickly.\nAs a token of our appreciation, we’ve added 15 days of Pro membership to your account balance automatically.\n We truly appreciate your understanding and support.\nIf you encounter any other issues, please don’t hesitate to reach out — we’re always here to help.\nBest regards,",
+      "zh": "我们很高兴地通知您，您报告的问题现已解决。\n 再次感谢您的反馈——它帮助我们快速定位并解决了问题。\n为了表达我们的谢意，我们已自动为您添加15天的专业版会员资格\n 。非常感谢您的理解和支持。\n如果您遇到任何其他问题，请随时联系我们——我们随时为您提供帮助。"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "manual_only": true,
+    "delivery_policy": "manual"
+  },
+  {
+    "id": 17,
+    "scenario": "多账号登录的问题",
+    "keywords": [
+      "multiple accounts",
+      "two accounts",
+      "google login",
+      "email login",
+      "different account",
+      "pro membership linked",
+      "多账号",
+      "两个账号",
+      "谷歌登录",
+      "邮箱登录",
+      "会员在另一个账号"
+    ],
+    "template": "Please note that logging in with Google and logging in with an email are counted as two different accounts.\n We’ve checked and found that your Pro membership is linked to the account you signed in with Google.\nKindly log in using your Google account and confirm.\n If you have any other questions, please feel free to reach out anytime.\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Please note that logging in with Google and logging in with an email are counted as two different accounts.\n We’ve checked and found that your Pro membership is linked to the account you signed in with Google.\nKindly log in using your Google account and confirm.\n If you have any other questions, please feel free to reach out anytime.\nBest regards,\niWeaver Team",
+      "de": "Bitte beachten Sie, dass die Anmeldung mit Google und die Anmeldung per E-Mail als zwei unterschiedliche Konten behandelt werden.\n\nWir haben geprüft und festgestellt, dass Ihre Pro-Mitgliedschaft mit dem Konto verknüpft ist, mit dem Sie sich über Google angemeldet haben.\n\nBitte melden Sie sich mit Ihrem Google-Konto an und prüfen Sie es erneut. Wenn Sie weitere Fragen haben, können Sie uns jederzeit kontaktieren.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 18,
+    "scenario": "开发票问题",
+    "keywords": [
+      "invoice",
+      "request invoice",
+      "VAT number",
+      "tax id",
+      "company name",
+      "invoice email",
+      "发票",
+      "开发票",
+      "开票",
+      "税号",
+      "公司名称",
+      "factura"
+    ],
+    "template": "Dear Customer,\n\nThank you for reaching out to us.\n\nWe are happy to assist you with the invoice for your subscription. In order to issue the invoice correctly, we kindly request you to provide the following details:\n\n1. Company Name\n2. VAT Number\n3. Address\n4. Email Address used for the iweaver subscription\n\nOnce we receive the information, we will process the invoice promptly. If you have any questions or need further assistance, please don’t hesitate to let us know.\n\nThank you for your cooperation and support.\n\nBest regards,  \n  \niWeaver Team",
+    "templates": {
+      "en": "Dear Customer,\n\nThank you for reaching out to us.\n\nWe are happy to assist you with the invoice for your subscription. In order to issue the invoice correctly, we kindly request you to provide the following details:\n\n1. Company Name\n2. VAT Number\n3. Address\n4. Email Address used for the iweaver subscription\n\nOnce we receive the information, we will process the invoice promptly. If you have any questions or need further assistance, please don’t hesitate to let us know.\n\nThank you for your cooperation and support.\n\nBest regards,  \n  \niWeaver Team",
+      "de": "Sehr geehrte Kundin, sehr geehrter Kunde,\n\nvielen Dank für Ihre Nachricht.\n\nGerne unterstützen wir Sie bei der Rechnung für Ihr Abonnement. Damit wir die Rechnung korrekt ausstellen können, senden Sie uns bitte die folgenden Informationen:\n\n1. Firmenname\n2. Umsatzsteuer-/Steuernummer\n3. Adresse\n4. E-Mail-Adresse, die für das iWeaver-Abonnement verwendet wurde\n\nSobald wir diese Informationen erhalten, bearbeiten wir die Rechnung. Bei weiteren Fragen helfen wir Ihnen gerne weiter.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 19,
+    "scenario": "收到开票信息之后",
+    "keywords": [
+      "invoice details",
+      "provided invoice details",
+      "VAT number",
+      "company name",
+      "invoice information",
+      "开票信息",
+      "发票信息",
+      "已提供开票信息",
+      "收到开票信息"
+    ],
+    "template": "Hi there,\nThank you for your email and for providing the invoice details. We usually require 5-7 business days to process the invoice. Once it's ready, we will send it to you via email.\nIf you have any further questions, please feel free to reach out.\nThank you for your patience.\nBest regards,\n\niWeaver Team",
+    "templates": {
+      "en": "Hi there,\nThank you for your email and for providing the invoice details. We usually require 5-7 business days to process the invoice. Once it's ready, we will send it to you via email.\nIf you have any further questions, please feel free to reach out.\nThank you for your patience.\nBest regards,\n\niWeaver Team",
+      "de": "Hallo,\n\nvielen Dank für Ihre E-Mail und für die Bereitstellung der Rechnungsdaten. Die Bearbeitung der Rechnung dauert in der Regel 5–7 Werktage. Sobald sie fertig ist, senden wir sie Ihnen per E-Mail zu.\n\nWenn Sie weitere Fragen haben, können Sie sich jederzeit an uns wenden.\n\nVielen Dank für Ihre Geduld.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/常见问题",
+    "delivery_policy": "manual",
+    "manual_only": true
+  },
+  {
+    "id": 20,
+    "scenario": "上传文档格式",
+    "keywords": [
+      "supported file formats",
+      "file formats",
+      "upload format",
+      "document format",
+      "what files",
+      "pdf ppt excel",
+      "上传文档格式",
+      "支持格式",
+      "文件格式",
+      "支持哪些格式"
+    ],
+    "template": "Hello,\n\niWeaver supports mainstream file formats, including images, PDF, PPT, Excel, and more. You can upload your document directly and try processing it in your workspace.\n\nIf a specific file cannot be uploaded, please reply with the file type and any error message you see, and we will help you check it.\n\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hello,\n\niWeaver supports mainstream file formats, including images, PDF, PPT, Excel, and more. You can upload your document directly and try processing it in your workspace.\n\nIf a specific file cannot be uploaded, please reply with the file type and any error message you see, and we will help you check it.\n\nBest regards,\niWeaver Team",
+      "zh": "您好，\n\niWeaver 支持图片、PDF、PPT、Excel 等主流文档格式。您可以直接在工作区上传并尝试处理。\n\n如果某个具体文件无法上传，请回复文件类型和页面提示的错误信息，我们会帮您进一步查看。\n\n谢谢。",
+      "de": "Hallo,\n\niWeaver unterstützt gängige Dateiformate, darunter Bilder, PDF, PPT, Excel und weitere Formate. Sie können Ihr Dokument direkt in Ihrem Workspace hochladen und verarbeiten.\n\nFalls eine bestimmte Datei nicht hochgeladen werden kann, senden Sie uns bitte den Dateityp und die angezeigte Fehlermeldung. Wir helfen Ihnen gerne bei der Prüfung.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/iW基础知识库",
+    "delivery_policy": "auto",
+    "manual_only": false
+  },
+  {
+    "id": 21,
+    "scenario": "上传文档数量",
+    "keywords": [
+      "how many files",
+      "upload limit",
+      "number of documents",
+      "20 files",
+      "maximum files",
+      "上传文档数量",
+      "一次上传几个",
+      "单次20个",
+      "上传数量限制"
+    ],
+    "template": "Hello,\n\nFor document upload, iWeaver currently supports uploading up to 20 files at a time.\n\nIf you need to process more files, please upload them in batches.\n\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hello,\n\nFor document upload, iWeaver currently supports uploading up to 20 files at a time.\n\nIf you need to process more files, please upload them in batches.\n\nBest regards,\niWeaver Team",
+      "zh": "您好，\n\niWeaver 当前支持单次最多上传 20 个文件。\n\n如果您需要处理更多文件，建议分批上传。\n\n谢谢。",
+      "de": "Hallo,\n\nderzeit unterstützt iWeaver das Hochladen von bis zu 20 Dateien auf einmal.\n\nWenn Sie mehr Dateien verarbeiten möchten, laden Sie sie bitte in mehreren Stapeln hoch.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/iW基础知识库",
+    "delivery_policy": "auto",
+    "manual_only": false
+  },
+  {
+    "id": 22,
+    "scenario": "导出格式",
+    "keywords": [
+      "export format",
+      "export formats",
+      "download format",
+      "export to docx",
+      "export to ppt",
+      "导出格式",
+      "支持导出",
+      "下载格式",
+      "导出docx",
+      "导出ppt"
+    ],
+    "template": "Hello,\n\niWeaver supports exporting in multiple formats, including TXT, MD, PDF, PNG, DOCX, and PPT.\n\nIf you cannot find the export option you need, please reply with the page or feature you are using, and we will help you check it.\n\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hello,\n\niWeaver supports exporting in multiple formats, including TXT, MD, PDF, PNG, DOCX, and PPT.\n\nIf you cannot find the export option you need, please reply with the page or feature you are using, and we will help you check it.\n\nBest regards,\niWeaver Team",
+      "zh": "您好，\n\niWeaver 支持多种导出格式，包括 TXT、MD、PDF、PNG、DOCX 和 PPT。\n\n如果您找不到所需的导出选项，请回复您正在使用的页面或功能，我们会帮您查看。\n\n谢谢。",
+      "de": "Hallo,\n\niWeaver unterstützt mehrere Exportformate, darunter TXT, MD, PDF, PNG, DOCX und PPT.\n\nWenn Sie die benötigte Exportoption nicht finden, teilen Sie uns bitte mit, welche Seite oder Funktion Sie verwenden. Wir helfen Ihnen gerne weiter.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/iW基础知识库",
+    "delivery_policy": "auto",
+    "manual_only": false
+  },
+  {
+    "id": 23,
+    "scenario": "文档大小限制",
+    "keywords": [
+      "file size limit",
+      "document size limit",
+      "maximum file size",
+      "100mb",
+      "100 mb",
+      "文档大小限制",
+      "文件大小限制",
+      "最大100MB",
+      "单文档最大"
+    ],
+    "template": "Hello,\n\nThe current file size limit is 100 MB per document.\n\nIf your file is larger than this, we recommend compressing it or splitting it into smaller files before uploading.\n\nBest regards,\niWeaver Team",
+    "templates": {
+      "en": "Hello,\n\nThe current file size limit is 100 MB per document.\n\nIf your file is larger than this, we recommend compressing it or splitting it into smaller files before uploading.\n\nBest regards,\niWeaver Team",
+      "zh": "您好，\n\n当前单个文档最大支持 100MB。\n\n如果您的文件超过该大小，建议先压缩文件或拆分成多个较小文件后再上传。\n\n谢谢。",
+      "de": "Hallo,\n\ndie aktuelle Größenbeschränkung beträgt 100 MB pro Dokument.\n\nWenn Ihre Datei größer ist, empfehlen wir, sie zu komprimieren oder in kleinere Dateien aufzuteilen, bevor Sie sie hochladen.\n\nMit freundlichen Grüßen\niWeaver Team"
+    },
+    "source": "iWeaver用户常见问题（客服）.xlsx/iW基础知识库",
+    "delivery_policy": "auto",
+    "manual_only": false
+  }
+]

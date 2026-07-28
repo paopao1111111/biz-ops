@@ -1,0 +1,1 @@
+"""iWeaver Admin adapter."""

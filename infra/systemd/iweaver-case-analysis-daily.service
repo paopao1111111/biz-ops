@@ -1,0 +1,12 @@
+[Unit]
+Description=iWeaver Daily Case Analysis
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=cloudcli
+WorkingDirectory=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer
+EnvironmentFile=-/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/.env
+ExecStart=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/.venv/bin/python /srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/scripts/run_case_analysis_daily.py
+TimeoutStartSec=3600

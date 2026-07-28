@@ -1,0 +1,14 @@
+[Unit]
+Description=Dashboard metrics daily Feishu sheet update
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+User=cloudcli
+WorkingDirectory=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer
+Environment=HOME=/home/cloudcli
+Environment=PYTHONUNBUFFERED=1
+UMask=0002
+TimeoutStartSec=1800
+ExecStart=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/.venv/bin/python /srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/scripts/run_dashboard_workflow.py --workflow dashboard_metrics_daily_update --payload-file /srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/scripts/payload_daily.json

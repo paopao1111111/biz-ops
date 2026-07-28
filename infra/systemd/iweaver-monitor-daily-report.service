@@ -1,0 +1,13 @@
+[Unit]
+Description=iWeaver unified daily automation monitoring report
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/iweaver-monitoring
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/opt/iweaver-monitoring:/opt/edm-system
+TimeoutStartSec=1800
+ExecStart=/opt/edm-system/.venv/bin/python /opt/iweaver-monitoring/monitoring/jobs/daily_monitor_report.py

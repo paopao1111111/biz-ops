@@ -1,0 +1,26 @@
+[Unit]
+Description=Multisite Weekly Metrics Collector
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=cloudcli
+Group=cloudcli-agents
+WorkingDirectory=/opt/multisite-dashboard
+EnvironmentFile=/etc/multisite-weekly-dashboard.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3.11 /opt/multisite-dashboard/collector.py --weeks 12
+TimeoutStartSec=600
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+ReadWritePaths=/var/lib/multisite-weekly-dashboard

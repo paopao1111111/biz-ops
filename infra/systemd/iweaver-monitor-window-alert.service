@@ -1,0 +1,13 @@
+[Unit]
+Description=iWeaver unified monitoring 0-N data anomaly window alert
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/opt/iweaver-monitoring:/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer
+TimeoutStartSec=1800
+ExecStart=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/.venv/bin/python /opt/iweaver-monitoring/monitoring/jobs/dashboard_window_alert.py

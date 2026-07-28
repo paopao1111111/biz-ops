@@ -1,0 +1,14 @@
+[Unit]
+Description=iWeaver Feedback Auto-Reply Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/edm-system
+ExecStart=/opt/edm-system/.venv/bin/python /opt/edm-system/feedback_service.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+[Unit]
+Description=Mihomo proxy for EDM Gmail access
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/mihomo-edm
+ExecStart=/opt/mihomo-edm/mihomo -d /opt/mihomo-edm -f /opt/mihomo-edm/config.yaml
+Restart=always
+RestartSec=5
+LimitNOFILE=1048576
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

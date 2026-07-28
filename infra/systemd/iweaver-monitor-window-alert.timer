@@ -1,0 +1,12 @@
+[Unit]
+Description=Run iWeaver unified monitoring data anomaly checks at 0-6/0-12/0-18/0-24 windows
+
+[Timer]
+OnCalendar=*-*-* 00,06,12,18:05:00
+Persistent=true
+AccuracySec=1min
+RandomizedDelaySec=0
+Unit=iweaver-monitor-window-alert.service
+
+[Install]
+WantedBy=timers.target

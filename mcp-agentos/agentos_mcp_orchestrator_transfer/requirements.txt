@@ -1,0 +1,10 @@
+mcp
+requests
+PyYAML
+Pillow
+google-api-python-client
+google-auth
+google-auth-httplib2
+httplib2
+PySocks
+lark-oapi

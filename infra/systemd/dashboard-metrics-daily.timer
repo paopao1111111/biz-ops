@@ -1,0 +1,12 @@
+[Unit]
+Description=Run dashboard metrics daily Feishu sheet update
+
+[Timer]
+OnCalendar=*-*-* 08:30:00
+Persistent=true
+AccuracySec=1min
+RandomizedDelaySec=0
+Unit=dashboard-metrics-daily.service
+
+[Install]
+WantedBy=timers.target

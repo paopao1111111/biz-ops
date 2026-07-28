@@ -1,0 +1,82 @@
+[
+  {
+    "type": "关于取消订阅",
+    "reply_en": "Hi there,\nThank you for reaching out to us.\nWe’re sorry to hear that your experience didn’t fully meet your expectations.\nYou can cancel your subscription by following these steps:\n• Click your account avatar in the bottom-left corner\n• Go to Billing\n• Select Cancel Subscription\nIf you need any assistance during the process or have further questions, please don’t hesitate to reach out — we’re always happy to help.\nWarm regards,\niWeaver Team",
+    "reply_zh": "您可以自行取消订阅，操作路径如下：\n  点击页面左下角的账户图标\n  进入 Billing（账单） 页面\n  在页面中选择 取消订阅 即可\n如果在操作过程中遇到任何问题，请随时联系我们。"
+  },
+  {
+    "type": "取消订阅",
+    "reply_en": "Hi there,\nThanks for reaching out.\nWe've canceled your subscription on our end successfully.\nYou won’t be charged again, and the subscription will not renew starting from next month.\nIf you have any other questions or need further assistance, feel free to let us know — we’re happy to help.\nBest regards,\niWeaver Team",
+    "reply_zh": ""
+  },
+  {
+    "type": "关于帐户点数的解释",
+    "reply_en": "Dear User,\nThank you for reaching out to us.\nRegarding your question about Account Credits, I am happy to provide some clarification.\nThese credits are primarily used for the processing and computation of large documents. Because handling long-form text and complex data requires significant computational resources, this system ensures a stable and high-quality experience for all our users.\nHere are the key details regarding your quota:\nMonthly Allowance: Your account is credited with 5,000 points every month.\nAutomatic Reset: This balance refreshes automatically at the start of each billing cycle.\nUsage Outlook: Please rest assured that 5,000 points are designed to comfortably cover extensive daily tasks and deep research needs. You can continue your work without any concern about running out during your typical workflow.\nIf you have any further questions about your usage or need assistance with a specific project, please don't hesitate to let us know.\nBest regards,\niWeaver Team",
+    "reply_zh": ""
+  },
+  {
+    "type": "要求退款",
+    "reply_en": "Hi there,\n\nWe’re very sorry for the inconvenience caused and truly appreciate your feedback. \nPlease rest assured that your membership will remain active.\nWe have submitted your refund request, and the full amount will be returned to your account within 7-15 business days.\n\nThank you again for your understanding, and please don’t hesitate to reach out if you have any further questions or concerns.\n\nBest regards\niWeaver Team",
+    "reply_zh": "对于给您带来的不便，我们深表歉意，并非常感谢您的反馈。请放心，您的会员权益将会继续保留。\n我们已提交了您的退款申请，金额将在 7 个工作日内退回至您的账户。\n再次感谢您的理解，如有任何其他问题或疑虑，请随时联系我们。"
+  },
+  {
+    "type": "关于Bug反馈",
+    "reply_en": "Thank you very much for bringing this issue to our attention. We truly appreciate your feedback, as it helps us improve our service and provide a better experience for all our users.\nOur team is already reviewing the bug, and we will work to resolve it as quickly as possible. We’ll keep you updated once it has been fixed.\nThanks again for your support and understanding.",
+    "reply_zh": "非常感谢您向我们反映此问题。我们非常感谢您的反馈，这有助于我们改进服务，并为所有用户提供更好的体验。\n我们的团队正在审核该错误，并将尽快修复。修复完成后，我们会及时通知您。\n再次感谢您的支持和理解。"
+  },
+  {
+    "type": "Bug修复后的跟进",
+    "reply_en": "We’re happy to inform you that the issue you reported has now been resolved. Thank you again for your feedback, which helped us identify and fix the problem quickly.\nYou can now try using the feature again here:\n 👉https://www.iweaver.ai/\nIf you still encounter any issues, it may be due to your browser cache. In that case, we recommend:\n  1. Clearing your browser cache and trying again.\n  2. Switching to another browser – we recommend Google Chrome for the best experience.\nWe appreciate your patience and support. Please let us know if you experience any further issues.\nBest regards,",
+    "reply_zh": "我们很高兴地通知您，您报告的问题现已解决。再次感谢您的反馈，这帮助我们快速识别并解决问题。\n您现在可以在此处再次尝试使用该功能：\n 👉 [插入 URL]\n如果您仍然遇到问题，可能是由于浏览器缓存造成的。在这种情况下，我们建议：\n  1、清除浏览器缓存并重试。\n  2、切换到其他浏览器 – 我们推荐使用Google Chrome以获得最佳体验。\n \n感谢您的耐心和支持。如果您遇到任何其他问题，请告知我们。"
+  },
+  {
+    "type": "验证码不显示的问题",
+    "reply_en": "Hello,\nThank you for reaching out to us and for letting us know about this issue. We’re sorry for the inconvenience this may have caused.\nThis issue may be related to your browser cache or temporary browser data. In this case, we kindly suggest trying the following steps:\nClear your browser cache and cookies, then refresh the page and try again.\nSwitch to a different browser. For the best experience, we recommend using Google Chrome.\nIf the issue persists after trying the above steps, please let us know. You may also share a screenshot or any error message you see, which will help us further investigate and assist you more efficiently.\nThank you very much for your patience and understanding. We truly appreciate your support and are always here to help.\nBest regards,\niWeaver Support Team",
+    "reply_zh": "这可能是由于您的浏览器缓存导致的。建议您尝试以下操作：\n清理浏览器缓存后重新尝试；\n更换其他浏览器——我们推荐使用 Google Chrome 浏览器以获得最佳体验。\n感谢您的耐心与支持。若仍有问题，请随时与我们联系。\n此致\n敬礼！"
+  },
+  {
+    "type": "新需求反馈",
+    "reply_en": "Thank you for sharing your suggestion with us. We really appreciate your input, as it helps us improve our product and better serve our users.\nWe have forwarded your request to our product team for review and consideration. While we cannot guarantee an immediate implementation, please know that your feedback is valuable and will be taken into account for future updates.\nThanks again for your support and for helping us make our product better.",
+    "reply_zh": "感谢您与我们分享您的建议。我们非常重视您的意见，因为它有助于我们改进产品，更好地服务用户。\n我们已将您的请求转发给产品团队进行审核和考量。虽然我们无法保证立即实施，但请您理解，您的反馈非常宝贵，我们会在未来的更新中予以考虑。\n再次感谢您的支持并帮助我们改进产品。"
+  },
+  {
+    "type": "需求上线后跟进",
+    "reply_en": "We’re excited to let you know that the feature you suggested is now available! Thank you again for your valuable feedback—it helped us prioritize and improve our product.\nYou can try it out here:\n 👉 [Insert URL]\nWe’d love to hear your thoughts once you’ve had a chance to use it. Your feedback continues to help us make the product even better!\nBest regards,",
+    "reply_zh": "我们很高兴地通知您，您建议的功能现已上线！再次感谢您的宝贵反馈——它帮助我们确定了产品的优先级并进行了改进。\n您可以在这里尝试一下：\n 👉 [插入网址]\n我们很乐意听取您使用后的反馈。您的反馈将帮助我们不断改进产品！"
+  },
+  {
+    "type": "询问 折扣码",
+    "reply_en": "Thanks for your interest!\nWe currently offer an 20% student discount. If you’re a student, just provide your school email and I’ll activate the discount for you.\nWe also have a partner/affiliate program, which includes a 10% discount for your audience and a 10% commission for you as the promoter.\nPlease let me know which option works better for you, and I’ll be happy to help you proceed!",
+    "reply_zh": "感谢您的关注！\n我们目前提供20%的学生折扣。如果您是学生，只需提供您的学校邮箱地址，我就会帮您激活折扣。\n我们还有一个合作伙伴/附属计划，其中包括为您的观众提供10% 的折扣，并为您作为推广者提供10% 的佣金。\n请让我知道哪种选择更适合您，我很乐意帮助您继续！"
+  },
+  {
+    "type": "删除账户",
+    "reply_en": "Hello,\nYou can delete your account directly from your account settings.\nPlease follow these steps:\nLog in to your account\nGo to Settings\nClick Account\nSelect Delete Account and confirm\nIf you encounter any issues or need further assistance, feel free to let us know.\nBest regards,\niWeaver Team",
+    "reply_zh": ""
+  },
+  {
+    "type": "关于用户反馈的问题不清晰，需要提供截图的",
+    "reply_en": "Thank you for your message, and we’re truly sorry for the issue you’re experiencing with your access.\nTo help us better understand the situation and resolve it as quickly as possible, could you please send us a screenshot showing the message or the current status of your account? This will allow us to check whether your PRO membership has been successfully activated on our end.\nWe remain at your disposal and will take immediate action once we receive your reply.\nBest regards,",
+    "reply_zh": "感谢您的留言，对于您在使用服务时遇到的问题，我们深表歉意。\n为了帮助我们更好地了解情况并尽快解决问题，请您提供显示该消息或您当前账户状态的屏幕截图。这将有助于我们确认您的专业会员资格是否已在我们这边成功激活。\n我们将随时听候您的差遣，一旦收到您的回复，我们将立即采取行动。"
+  },
+  {
+    "type": "关于bug已经修复，并且赠送会员给对方的",
+    "reply_en": "We’re happy to inform you that the issue you reported has now been resolved.\n Thank you again for your feedback — it helped us identify and fix the problem quickly.\nAs a token of our appreciation, we’ve added 15 days of Pro membership to your account balance automatically.\n We truly appreciate your understanding and support.\nIf you encounter any other issues, please don’t hesitate to reach out — we’re always here to help.\nBest regards,",
+    "reply_zh": "我们很高兴地通知您，您报告的问题现已解决。\n 再次感谢您的反馈——它帮助我们快速定位并解决了问题。\n为了表达我们的谢意，我们已自动为您添加15天的专业版会员资格\n 。非常感谢您的理解和支持。\n如果您遇到任何其他问题，请随时联系我们——我们随时为您提供帮助。"
+  },
+  {
+    "type": "多账号登录的问题",
+    "reply_en": "Please note that logging in with Google and logging in with an email are counted as two different accounts.\n We’ve checked and found that your Pro membership is linked to the account you signed in with Google.\nKindly log in using your Google account and confirm.\n If you have any other questions, please feel free to reach out anytime.\nBest regards,\niWeaver Team",
+    "reply_zh": ""
+  },
+  {
+    "type": "开发票问题",
+    "reply_en": "Dear Customer,\n\nThank you for reaching out to us.\n\nWe are happy to assist you with the invoice for your subscription. In order to issue the invoice correctly, we kindly request you to provide the following details:\n\n1. Company Name\n2. VAT Number\n3. Address\n4. Email Address used for the iweaver subscription\n\nOnce we receive the information, we will process the invoice promptly. If you have any questions or need further assistance, please don’t hesitate to let us know.\n\nThank you for your cooperation and support.\n\nBest regards,  \n  \niWeaver Team",
+    "reply_zh": ""
+  },
+  {
+    "type": "收到开票信息之后",
+    "reply_en": "Hi there,\nThank you for your email and for providing the invoice details. We usually require 5-7 business days to process the invoice. Once it's ready, we will send it to you via email.\nIf you have any further questions, please feel free to reach out.\nThank you for your patience.\nBest regards,\n\niWeaver Team",
+    "reply_zh": ""
+  }
+]

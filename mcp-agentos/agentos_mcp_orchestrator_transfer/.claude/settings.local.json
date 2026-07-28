@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp *)",
+      "Bash(.venv/bin/python mcp_server.py)",
+      "mcp__agentos-orchestrator__dashboard_metrics_daily_update",
+      "Bash(.venv/bin/python *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "agentos-orchestrator"
+  ]
+}

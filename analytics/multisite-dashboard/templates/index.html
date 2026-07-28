@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周度经营看板</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<div class="app">
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">W</span>
+      <span>周度经营看板</span>
+      <button class="sidebar-close" id="sidebarClose" aria-label="关闭菜单">×</button>
+    </div>
+    <nav class="sidebar-nav" aria-label="主导航">
+      <a href="#" class="nav-item active" data-view="overview"><span>总览</span></a>
+      <div class="nav-heading">产品</div>
+      <a href="#" class="nav-item" data-view="iWeaver"><span>iWeaver / 其他</span></a>
+      <a href="#" class="nav-item" data-view="Palmly"><span>Palmly</span></a>
+      <a href="#" class="nav-item" data-view="LearningCoach"><span>学习教练</span></a>
+      <div class="nav-heading">数据治理</div>
+      <a href="#" class="nav-item" data-view="quality"><span>数据质量</span></a>
+      <a href="#" class="nav-item" data-view="definitions"><span>口径说明</span></a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="rule-version" id="sidebarVersion">规则载入中</div>
+      <a href="#" id="logoutBtn">退出登录</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-button" id="menuButton" aria-label="打开菜单" aria-expanded="false">☰</button>
+        <div>
+          <div class="page-heading-row">
+            <h1 id="pageTitle">总览</h1>
+            <span class="badge" id="windowBadge"></span>
+          </div>
+          <div class="page-subtitle" id="pageSubtitle">三产品周度经营与数据质量</div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <label class="sr-only" for="weekSelect">选择周</label>
+        <select id="weekSelect"></select>
+        <span class="update-time" id="updateTime">载入中</span>
+      </div>
+    </header>
+
+    <div id="content">
+      <section id="view-dashboard">
+        <div class="kpi-grid" id="kpiGrid" aria-live="polite"></div>
+        <div class="quality-strip" id="qualityStrip"></div>
+
+        <section class="section explorer-section" id="explorerSection">
+          <div class="section-header explorer-heading">
+            <div>
+              <h2>指标趋势探索器</h2>
+              <p id="metricDescription">选择指标、产品与时间范围，查看趋势和精确值。</p>
+            </div>
+            <span class="classification-badge" id="classificationBadge"></span>
+          </div>
+          <div class="explorer-controls">
+            <div class="control-group metric-control">
+              <label for="metricSelect">指标</label>
+              <select id="metricSelect"></select>
+            </div>
+            <fieldset class="control-group product-control">
+              <legend>产品（最多 4 个）</legend>
+              <div class="product-options" id="productOptions"></div>
+            </fieldset>
+            <div class="control-group compact-control">
+              <label for="grainSelect">粒度</label>
+              <select id="grainSelect">
+                <option value="day">日</option>
+                <option value="week" selected>周</option>
+                <option value="month">月</option>
+              </select>
+            </div>
+            <div class="control-group compact-control">
+              <label for="rangeSelect">范围</label>
+              <select id="rangeSelect"></select>
+            </div>
+            <div class="control-group chart-control">
+              <span class="control-label">图表</span>
+              <div class="segmented" id="chartButtons" role="group" aria-label="图表类型">
+                <button type="button" data-chart="line">折线</button>
+                <button type="button" data-chart="bar">柱状</button>
+              </div>
+            </div>
+            <label class="partial-toggle">
+              <input type="checkbox" id="partialToggle" checked>
+              <span id="partialLabel">包含当前周</span>
+            </label>
+          </div>
+          <div class="explorer-status" id="explorerStatus"></div>
+          <div class="chart-panel">
+            <div class="chart-legend" id="chartLegend"></div>
+            <div class="svg-chart" id="trendChart" aria-live="polite"></div>
+          </div>
+          <details class="exact-data" id="exactData">
+            <summary>查看精确数据与状态</summary>
+            <div class="table-wrap">
+              <table class="data-table" id="trendTable">
+                <caption id="trendCaption">指标精确数据</caption>
+                <thead id="trendTableHead"></thead>
+                <tbody id="trendTableBody"></tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+
+        <section class="section" id="productComparisonSection">
+          <div class="section-header">
+            <div>
+              <h2>产品对比</h2>
+              <p>产品活跃用户可能重叠，不可相加为全站活跃。</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="productTable">
+              <caption>所选周三产品核心指标</caption>
+              <thead>
+                <tr>
+                  <th scope="col">产品</th>
+                  <th scope="col">新增 / 首次使用</th>
+                  <th scope="col">活跃用户</th>
+                  <th scope="col">回访占比</th>
+                  <th scope="col">主要使用量</th>
+                  <th scope="col">激活 / 回访</th>
+                </tr>
+              </thead>
+              <tbody id="productTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section id="view-quality" hidden>
+        <div class="quality-summary-grid" id="qualitySummary"></div>
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <h2>质量趋势</h2>
+              <p>覆盖率和关联率下降时，相关业务指标只展示观察值，不做外推。</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table quality-table">
+              <caption>最近各周关键数据质量</caption>
+              <thead>
+                <tr>
+                  <th scope="col">周</th>
+                  <th scope="col">domain 覆盖</th>
+                  <th scope="col">Palmly message_id</th>
+                  <th scope="col">Palmly 聊天关联</th>
+                  <th scope="col">多产品重叠</th>
+                  <th scope="col">状态</th>
+                </tr>
+              </thead>
+              <tbody id="qualityTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+        <section class="section">
+          <div class="section-header"><div><h2>源数据范围</h2><p>源表接入前的历史周不会再显示为真实 0。</p></div></div>
+          <div class="source-grid" id="sourceGrid"></div>
+        </section>
+      </section>
+
+      <section id="view-definitions" hidden>
+        <div class="definitions" id="definitionsContent"></div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

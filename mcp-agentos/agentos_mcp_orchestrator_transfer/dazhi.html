@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝航蹲闸</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .big-text {
+            font-size: 120px;
+            font-weight: 900;
+            color: transparent;
+            background: linear-gradient(90deg, #e94560, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #e94560);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradient 3s linear infinite;
+            text-shadow: 0 0 30px rgba(233, 69, 96, 0.5);
+            letter-spacing: 20px;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        @media (max-width: 768px) {
+            .big-text {
+                font-size: 60px;
+                letter-spacing: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="big-text">绝航蹲闸</h1>
+    </div>
+</body>
+</html>

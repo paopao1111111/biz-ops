@@ -1,0 +1,18 @@
+[Unit]
+Description=Companion Web UI for Claude Code
+After=network.target
+
+[Service]
+Type=simple
+User=cloudcli
+Group=cloudcli
+WorkingDirectory=/home/cloudcli
+EnvironmentFile=/home/cloudcli/.companion/.env
+ExecStart=/home/cloudcli/.bun/bin/companion serve
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

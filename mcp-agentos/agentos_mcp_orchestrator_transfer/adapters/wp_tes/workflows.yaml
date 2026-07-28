@@ -1,0 +1,16 @@
+workflows:
+  case_analysis_day:
+    operation: case_analysis_day
+    mode: async
+  blog_generate:
+    operation: blog_generate
+    mode: async
+  page_generate:
+    operation: page_generate
+    mode: async
+  audit_post:
+    operation: audit_post
+    mode: async
+  rewrite_post:
+    operation: rewrite_post
+    mode: async

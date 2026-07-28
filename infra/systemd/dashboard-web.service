@@ -1,0 +1,17 @@
+[Unit]
+Description=iWeaver Growth Dashboard Web
+After=network.target
+
+[Service]
+Type=simple
+User=cloudcli
+Group=cloudcli-agents
+WorkingDirectory=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer
+Environment=PYTHONPATH=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer
+ExecStart=/srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/.venv/bin/python -m adapters.dashboard_metrics.runtime.web_server --host 0.0.0.0 --port 8765 --db /srv/cloudcli-workspaces/default/agentos_mcp_orchestrator_transfer/storage/dashboard_metrics.db
+Restart=on-failure
+RestartSec=5
+UMask=0002
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+{
+  "dry_run": false,
+  "notify": true,
+  "sync_feishu": false
+}

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run iWeaver Daily Case Analysis at 09:13 Asia/Shanghai
+
+[Timer]
+OnCalendar=*-*-* 09:13:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1min
+Unit=iweaver-case-analysis-daily.service
+
+[Install]
+WantedBy=timers.target

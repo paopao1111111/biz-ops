@@ -1,0 +1,17 @@
+[Unit]
+Description=EDM Auto Reply Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/edm-system
+EnvironmentFile=/opt/edm-system/.env
+ExecStart=/opt/edm-system/.venv/bin/python /opt/edm-system/edm_service.py
+Restart=always
+RestartSec=60
+StandardOutput=append:/opt/edm-system/logs/edm.log
+StandardError=append:/opt/edm-system/logs/edm-error.log
+
+[Install]
+WantedBy=multi-user.target

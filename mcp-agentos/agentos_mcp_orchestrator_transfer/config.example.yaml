@@ -1,0 +1,45 @@
+adapters:
+- config:
+    assets_path: ./adapters/wp_tes/assets
+    prompts_path: ./adapters/wp_tes/assets/prompts.json
+  enabled: true
+  module: adapters.wp_tes.tools
+  name: wp_tes
+- config:
+    feishu_sheet:
+      end_col: BN
+      max_rows: 300
+      sheet_id: zPm6YE
+      spreadsheet_token: REPLACE_FROM_FEISHU_SENSITIVE_LIST
+      wiki_token: REPLACE_FROM_FEISHU_SENSITIVE_LIST
+    storage_path: ./storage/dashboard_metrics.db
+    table_name: iWeaver 核心增长指标
+    web_host: 0.0.0.0
+    web_port: ${DASHBOARD_METRICS_WEB_PORT:-8765}
+  enabled: true
+  module: adapters.dashboard_metrics.tools
+  name: dashboard_metrics
+- config:
+    max_pages: 30
+  enabled: true
+  module: adapters.competitor_seo.tools
+  name: competitor_seo
+- config:
+    api_base: ${IWEAVER_ADMIN_API_BASE:-https://www-test.iweaver.ai/api/v2}
+    prod_api_base: ${IWEAVER_ADMIN_PROD_API_BASE:-https://www.iweaver.ai/api/v2}
+    token: ${IWEAVER_ADMIN_TOKEN:-}
+  enabled: true
+  module: adapters.iweaver_admin.tools
+  name: iweaver_admin
+agentos:
+  base_url: ${AGENTOS_BASE_URL:-https://agent.xiaoduoai.com}
+  default_workflow_id: ${NEW_COZE_WORKFLOW_ID:-}
+  poll_interval: 3
+  timeout: 300
+  token: ${AGENTOS_TOKEN:-}
+concurrency:
+  default_max_workers: 3
+server:
+  name: agentos-orchestrator
+task_store:
+  path: ./storage/tasks

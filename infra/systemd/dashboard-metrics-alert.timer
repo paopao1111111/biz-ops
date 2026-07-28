@@ -1,0 +1,12 @@
+[Unit]
+Description=Run dashboard metrics alert check every 6 hours
+
+[Timer]
+OnCalendar=*-*-* 02,08,14,20:17:00
+Persistent=true
+AccuracySec=1min
+RandomizedDelaySec=0
+Unit=dashboard-metrics-alert.service
+
+[Install]
+WantedBy=timers.target

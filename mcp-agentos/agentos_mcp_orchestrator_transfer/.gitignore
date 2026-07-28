@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.py[cod]
+storage/wp_tes/*.json
+storage/wp_tes/*.txt
+storage/tasks/*.json

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Conservation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="iw-root" data-iw-root="true">
+        <div class="iw-container mx-auto max-w-[1200px] mb-10 lg:mb-[160px]">
+            <div class="max-w-[768px] mx-auto flex flex-col items-center pt-20">
+                <div data-agent-root="true" data-layout="all" class="flex w-full flex-col items-center">
+                    <!-- Tab 按钮 -->
+                    <div class="flex w-fit items-center bg-[#F2F6FF] rounded-[32px] p-[4px] mb-[32px] gap-[4px]">
+                        <button type="button" data-tab="file" class="flex items-center gap-[6px] rounded-[28px] px-[20px] py-[10px] text-[14px] font-medium text-[#030A1A] transition-all bg-white shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0091 1.33838H2.67578V13.3384C2.67578 14.0748 3.27273 14.6717 4.00911 14.6717H12.0091C12.7455 14.6717 13.3424 14.0748 13.3424 13.3384V4.67171L10.0091 1.33838Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9.33984 1.33838V4.00505C9.33984 4.74143 9.9368 5.33838 10.6732 5.33838H13.3398" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            File
+                        </button>
+                        <button type="button" data-tab="link" class="flex items-center gap-[6px] rounded-[28px] px-[20px] py-[10px] text-[14px] font-medium text-[#030A1A] transition-all text-[#6b7280]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6.5 9.5C7.05228 10.0523 7.84177 10.3333 8.5 10.3333C9.15823 10.3333 9.94772 10.0523 10.5 9.5L13.5 6.5C14.3284 5.67157 14.3284 4.32843 13.5 3.5C12.6716 2.67157 11.3284 2.67157 10.5 3.5L9.5 4.5" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M9.5 6.5C8.94772 5.94772 8.15823 5.66667 7.5 5.66667C6.84177 5.66667 6.05228 5.94772 5.5 6.5L2.5 9.5C1.67157 10.3284 1.67157 11.6716 2.5 12.5C3.32843 13.3284 4.67157 13.3284 5.5 12.5L6.5 11.5" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                            Link
+                        </button>
+                        <button type="button" data-tab="input" class="flex items-center gap-[6px] rounded-[28px] px-[20px] py-[10px] text-[14px] font-medium text-[#030A1A] transition-all text-[#6b7280]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8.66797 14H14.0013" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M14.1147 4.54126C14.4671 4.18888 14.6652 3.71091 14.6652 3.2125C14.6653 2.71409 14.4674 2.23607 14.115 1.8836C13.7626 1.53112 13.2846 1.33307 12.7862 1.33301C12.2878 1.33295 11.8098 1.53088 11.4573 1.88326L2.55999 10.7826C2.4052 10.9369 2.29073 11.127 2.22665 11.3359L1.34599 14.2373C1.32876 14.2949 1.32746 14.3562 1.34222 14.4145C1.35699 14.4728 1.38727 14.5261 1.42985 14.5686C1.47244 14.6111 1.52573 14.6413 1.58409 14.656C1.64245 14.6707 1.70369 14.6693 1.76132 14.6519L4.66332 13.7719C4.8721 13.7084 5.0621 13.5947 5.21665 13.4406L14.1147 4.54126Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            Input
+                        </button>
+                    </div>
+
+                    <!-- 文件上传区域 -->
+                    <div class="w-full relative">
+                        <div data-panel="file" class="block w-full">
+                            <div class="w-full">
+                                <div class="w-full rounded-[16px] border border-[#F3F4F6] bg-white p-[30px] shadow-[0_8px_20px_-6px_rgba(0,0,0,0.05)]">
+                                    <div class="relative flex flex-col items-center justify-center py-[40px] md:py-[70px] rounded-[14px] border-2 border-solid border-[#E4E7EC] bg-[rgba(249,250,251,0.5997)]">
+                                        <div data-role="agent-upload-count" class="absolute right-[16px] top-[16px] rounded-[6px] border border-[#E4E7EC] bg-white px-[12px] py-[4px] text-[13px] font-medium text-[#344054]">
+                                            0 / 20
+                                        </div>
+                                        <label data-role="agent-upload-hint" class="flex cursor-pointer flex-col items-center group">
+                                            <div class="relative mb-[20px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-[28px] h-[37px] md:w-[54px] md:h-[72px]" viewBox="24 16 54 72" fill="none">
+                                                    <g filter="url(#filter0_dd_3393_3265)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 19C24 17.3431 25.3431 16 27 16H53.6587C54.5122 16 55.3253 16.3635 55.8944 16.9996L71.2357 34.1458C71.7279 34.6959 72 35.4081 72 36.1462V81C72 82.6569 70.6569 84 69 84H27C25.3431 84 24 82.6569 24 81V19Z" fill="white"></path>
+                                                    </g>
+                                                    <g filter="url(#filter1_d_3393_3265)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M53.6587 16C54.5122 16 55.3253 16.3635 55.8944 16.9996L71.2357 34.1458C71.7279 34.6959 72 35.4081 72 36.1462V37C72 35.8954 71.1046 35 70 35H57C55.8954 35 55 34.1046 55 33V18C55 16.8954 54.1046 16 53 16H53.6587Z" fill="white"></path>
+                                                    </g>
+                                                    <circle cx="60" cy="70" r="18" fill="#222427"></circle>
+                                                    <rect x="54" y="62" width="12" height="16" fill="#D8D8D8" fill-opacity="0.01"></rect>
+                                                    <rect x="59" y="63" width="2" height="14" rx="1" fill="white"></rect>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M59.2929 63.0502C59.6834 62.6597 60.3166 62.6597 60.7071 63.0502C61.0976 63.4408 61.0976 64.0739 60.7071 64.4645L56.4645 68.7071C56.0739 69.0976 55.4408 69.0976 55.0503 68.7071C54.6597 68.3166 54.6597 67.6834 55.0503 67.2929L59.2929 63.0502Z" fill="white"></path>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M64.9491 67.2929C65.3397 67.6834 65.3397 68.3166 64.9491 68.7071C64.5586 69.0976 63.9255 69.0976 63.5349 68.7071C63.1443 68.3166 63.1443 67.6834 63.5349 67.2929L67.7775 63.0503C68.168 62.6598 68.8012 62.6598 69.1917 63.0503C69.5822 63.4408 69.5822 64.074 69.1917 64.4645L64.9491 67.2929Z" fill="white"></path>
+                                                </svg>
+                                            </div>
+                                            <h3 class="md:text-[20px] text-[14px] font-bold text-[#22272b] mb-[4px]">Upload Files</h3>
+                                            <p class="text-[12px] text-[#9ca3af]">支持格式: .doc, .pdf, .ppt, .txt, .md, .csv, .xlsx, .png, .jpg 等</p>
+                                            <input data-role="agent-upload-input" class="hidden" type="file" multiple accept=".doc,.docx,.pdf,.ppt,.pptx,.txt,.md,.csv,.xls,.xlsx,.png,.jpg,.jpeg,.webp,.gif,.mp3,.wav,.m4a,.mp4,.mov" />
+                                        </label>
+                                        <div data-role="agent-uploading-hint" class="hidden flex-col items-center justify-center w-full z-20 shrink-0">
+                                            <div class="mb-[24px] h-[72px] w-[72px] animate-spin rounded-full border-[6px] border-[#dbe6ff] border-t-[#0055FF]"></div>
+                                            <h3 class="mb-[8px] text-[20px] font-bold text-[#22272b]">Uploading...</h3>
+                                            <p class="text-[14px] text-[#9ca3af]">Please wait while we process your files</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab 切换功能
+        document.querySelectorAll('[data-tab]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('[data-tab]').forEach(b => {
+                    b.classList.remove('bg-white', 'shadow-[0_1px_3px_rgba(0,0,0,0.1)]');
+                    b.classList.add('text-[#6b7280]');
+                });
+                this.classList.add('bg-white', 'shadow-[0_1px_3px_rgba(0,0,0,0.1)]');
+                this.classList.remove('text-[#6b7280]');
+            });
+        });
+
+        // 文件上传计数
+        const fileInput = document.querySelector('[data-role="agent-upload-input"]');
+        const uploadCount = document.querySelector('[data-role="agent-upload-count"]');
+        const uploadHint = document.querySelector('[data-role="agent-upload-hint"]');
+        const uploadingHint = document.querySelector('[data-role="agent-uploading-hint"]');
+
+        uploadHint.addEventListener('click', () => fileInput.click());
+
+        fileInput.addEventListener('change', function() {
+            const count = this.files.length;
+            uploadCount.textContent = `${count} / 20`;
+            if (count > 0) {
+                uploadHint.classList.add('hidden');
+                uploadingHint.classList.remove('hidden');
+                uploadingHint.classList.add('flex');
+                setTimeout(() => {
+                    uploadingHint.classList.add('hidden');
+                    uploadingHint.classList.remove('flex');
+                    uploadHint.classList.remove('hidden');
+                    uploadCount.textContent = '0 / 20';
+                    fileInput.value = '';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
