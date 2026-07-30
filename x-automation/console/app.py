@@ -562,16 +562,13 @@ class H(BaseHTTPRequestHandler):
   try:c.execute("INSERT INTO workflow_items(item_key,account_id,source,author_handle,text,url,observed_at,status,created_at,updated_at) VALUES(?,?,?,?,?,?,?,'drafting',?,?) ON CONFLICT(item_key) DO UPDATE SET status='drafting',updated_at=excluded.updated_at",(item_key,item["account_id"],item["source"],item["author_handle"],item["text"],item["url"],item["observed_at"],n,n))
   finally:c.close()
   try:
-   if action=="draft":
-    analysis=workflow_llm.analyze_post(post_text=item["text"] or "",author_handle=item["author_handle"] or "",keyword=keyword)
-    if not analysis.get("recommend"):
-     n=now();c=conn()
-     try:c.execute("UPDATE workflow_items SET status='skipped',note=?,analysis_json=?,updated_at=? WHERE item_key=?",(f"不建议回复：{analysis.get('risk','')}",jd(analysis),n,item_key))
-     finally:c.close()
-     self.out(200,{"ok":True,"data":{"item_key":item_key,"status":"skipped","analysis":analysis,"reason":"not_recommended"}})
-     return
-   else:
-    analysis={}
+   analysis=workflow_llm.analyze_post(post_text=item["text"] or "",author_handle=item["author_handle"] or "",keyword=keyword)
+   if action=="draft" and not analysis.get("recommend"):
+    n=now();c=conn()
+    try:c.execute("UPDATE workflow_items SET status='skipped',note=?,analysis_json=?,updated_at=? WHERE item_key=?",(f"不建议回复：{analysis.get('risk','')}",jd(analysis),n,item_key))
+    finally:c.close()
+    self.out(200,{"ok":True,"data":{"item_key":item_key,"status":"skipped","analysis":analysis,"reason":"not_recommended"}})
+    return
    draft=workflow_llm.draft_comment(post_text=item["text"] or "",author_handle=item["author_handle"] or "",account_persona=persona,comment_style=str(data.get("style","")),recent_comments=recent,extra_instruction=str(data.get("instruction","")))
   except workflow_llm.LLMError as e:
    n=now();c=conn()
